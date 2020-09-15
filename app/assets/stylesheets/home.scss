@@ -1,3 +1,63 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+// header/style
+.header {
+  width: 100%;
+
+  &__top {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__top-text,
+  &__btn {
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  &__animals,
+  &__domi {
+    font-size: 4rem;
+  }
+  &__animals {
+    color: goldenrod;
+  }
+  &__domi {
+    color: green;
+  }
+  // 簡単ログインのスタイルも含みます
+  &__btn {
+    padding: 8px 16px;
+    font-weight: 600;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: white;
+      color: black;
+      border: 1px solid orange;
+    }
+  }
+  // devise/sessinosの_testuserのstyle
+  .actions {
+    padding-top: 30px;
+  }
+}
+
+// home/index style
+
