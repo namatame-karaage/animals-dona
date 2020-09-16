@@ -4,6 +4,9 @@
     <title>AnimalsDona</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -23,20 +26,35 @@
 
     <header class="header">
       <div class="header__top">
-        <%= link_to root_path, class: "header__top-text"  do %>
-          <span class="header__animals">Animals</span>
-          <span class="header__domi">Domi</span>
-        <% end %>
-
         <% if user_signed_in? %>
           <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "header__btn"%>
-        <% else %>
-          <%= link_to "寄付・入会する", new_user_registration_path, class: "header__btn"%>
-          <%= link_to "ログイン", new_user_session_path, class: "header__btn" %>
-          <%= render 'devise/sessions/testuser' , class: "header__btn"%>
         <% end %>
       </div>
     </header>
+
     <%= yield %>
+
+    <footer class="footer">@AnimalsDonation  2020</footer>
+
+    <script>
+    let mySwiper = new Swiper('.swiper-container', {
+      loop: true,
+      effect: 'fade',
+
+      centeredSlides: true,
+
+      pagination: {
+        el: '.swiper-pagination',
+      },
+       navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+          })
+
+    </script>
   </body>
 </html>

@@ -1,0 +1,39 @@
+.new{
+  display: flex;
+}
+
+.side-header {
+  width: 100vw;
+  height: 100vh;
+  &__top {
+    width: 360px;
+    height: 100%;
+    background-color: rgba(7, 44, 124, 0.87);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__btn {
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: 600;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: white;
+      color: orange;
+      border: 1px solid orange;
+    }
+  }
+}
+
+.signup {
+  width: calc(100vw - 360px);
+}

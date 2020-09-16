@@ -1,0 +1,32 @@
+// swiper
+.swiper-container {
+  width: 100%;
+  height: 600px;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+}
+.wrapper {
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 20px));
+    color: white;
+    font-size: 25px;
+    opacity: 0;
+    transition: opacity 0.1s ease 1s,transform 0.4s ease 1s;
+  }
+}
+
+.swiper-slide {
+  &-active{
+
+    & .wrapper__title {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

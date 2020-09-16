@@ -26,16 +26,20 @@
     text-decoration: none;
     font-size: 1.5rem;
   }
+
   &__animals,
   &__domi {
     font-size: 4rem;
   }
+
   &__animals {
     color: goldenrod;
   }
+
   &__domi {
     color: green;
   }
+
   // 簡単ログインのスタイルも含みます
   &__btn {
     padding: 8px 16px;
@@ -45,19 +49,143 @@
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.4s;
 
     &:hover {
       background-color: white;
-      color: black;
+      color: orange;
       border: 1px solid orange;
     }
   }
+
   // devise/sessinosの_testuserのstyle
   .actions {
     padding-top: 30px;
   }
+
+  &__text {
+    margin: 1px;
+  }
 }
 
-// home/index style
+// ヒーロースライダーは、modules/swiper.scssに記述してます
 
+// home/index style
+.domination {
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+
+  &__box {
+    width: 70%;
+    height: 100%;
+    padding-bottom: 100px;
+
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+  }
+
+  &__text {
+    font-size: 4.5rem;
+
+    &::after {
+      content: '';
+      display: block;
+      border: 2px solid green;
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
+
+  &__inner {
+    width: 60%;
+    font-size: 2.2rem;
+    margin: 0 auto 30px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+
+    &__title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &__inner {
+      list-style: none;
+    }
+    &__info {
+      display: none;
+    }
+    .show {
+      display: block;
+    }
+
+    &__right-box {
+      margin-left: 10px;
+
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__img {
+      width: 300px;
+      height: 130px;
+    }
+
+    &__img-text {
+      display: flex;
+      list-style: none;
+      font-size: 0;
+      padding: 0;
+      margin: 0;
+
+    }
+
+    &__items {
+      display: inline-block;
+      text-decoration: none;
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 16px;
+      margin-left: 10px;
+      font-size: 2rem;
+      &:hover {
+        opacity: 0.5;
+        transition: .8s;
+      }
+    }
+
+    .active {
+      background: #353d3e;
+      color: #fff;
+    }
+
+    &__btn {
+      display: inline-block;
+      text-decoration: none;
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 16px;
+      margin-top: 20px;
+      font-size: 2.6rem;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  background-color: skyblue;
+  text-align: center;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
