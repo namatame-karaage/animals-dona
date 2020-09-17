@@ -1,2 +1,36 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+ <h1 class="top-name">編集ページ</h1>
+
+
+<section class="section">
+  <div class="container">
+    <%= form_with model: @user do |f| %>
+      <div class="field">
+        <%# <i class="fas fa fa-user"></i> %>
+        <%= f.label :username, 'お名前' %><br />
+        <%= f.text_field :username%>
+      </div>
+
+      <div class="field">
+        <%# <i class="fas fa fa-envelope"></i> %>
+        <%= f.label :email,'メールアドレス' %><br />
+        <%= f.email_field :email%>
+      </div>
+
+      <div class="field">
+        <%# <i class="fas fa fa-id-card"></i> %>
+        <%= f.label :profile , "プロフィール"%><br />
+        <%= f.text_area :profile %>
+      </div>
+
+      <div class="field">
+        <%# <i class="fas fa fa-id-card"></i> %>
+        <%= f.label :profile_image , "プロフィール画像"%><br />
+        <%= f.attachment_field :profile_image %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "編集完了", class: "filed__btn" %>
+      </div>
+    <% end %>
+  </div>
+</section>

@@ -4,7 +4,7 @@
       <span class="header__animals">Animals</span>
       <span class="header__domi">Domi</span>
     <% end %>
-      <%= link_to "寄付・入会する", new_user_registration_path , class: "header__btn"%>
+      <%= link_to "寄付・入会のお願い", new_user_registration_path , class: "header__btn"%>
       <%= link_to "ログイン", new_user_session_path, class: "header__btn" %>
       <%= render 'devise/sessions/testuser', class: "header__btn"%>
   </div>
@@ -62,9 +62,10 @@
           <li><a href="#"　id="gosenen" class="container__items">5,000円</a></li>
           <li><a href="#"　id="itimanen" class="container__items">10,000円</a></li>
         </ul>
-          <%= link_to "寄付・入会する", new_user_registration_path, class: "container__btn"%>
+          <%= link_to "寄付・入会のお願い", new_user_registration_path , class: "header__btn"%>
       </div>
     </div>
   </div>
-
 </main>
+<footer class="footer">@AnimalsDonation  2020</footer>
+

@@ -1,0 +1,15 @@
+.notice-message,
+.alert-message {
+  .notice {
+    background-color: rgba(7, 44, 124, 0.87);
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .alert {
+    background-color: #f35500;
+    color: #fff;
+    text-align: center;
+  }
+}

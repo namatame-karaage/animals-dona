@@ -1,26 +1,48 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<section class="new">
+  <div class="side-header">
+    <div class="side-header__top">
+      <%= link_to root_path, class: "header__top-text"  do %>
+        <span class="header__animals">Animals</span>
+        <span class="header__domi">Domi</span>
+      <% end %>
+      <div class="side-header__i">
+        <i class="fab fa-themeisle icon"></i>
+        <%= link_to "トップへ戻る", root_path , class: "side-header__btn"%>
+      </div>
+      <div class="side-header__i">
+        <i class="fab fa-phoenix-framework icon"></i>
+        <%= link_to "寄付・入会のお願い", new_user_registration_path , class: "side-header__btn"%>
+      </div>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+  <div class="signup-in">
+    <h2 class="signup-in__title">ログインページ</h2>
+    <p class="signup-in__text">入力の方お願いします</p>
+      <div class="signup-in__box">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label :email,'メールアドレス' class: "field__name"  %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field__inner" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password , class: "field__name" %><br />
+            <%= f.password_field :password, autocomplete: "current-password", class: "field__inner" %>
+          </div>
+
+          <% if devise_mapping.rememberable? %>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me, class: "field__check" %>
+            </div>
+          <% end %>
+
+          <div class="actions">
+            <%= f.submit "ようこそ", class: "field__btn solid" %>
+          </div>
+        <% end %>
+      <%= render 'devise/sessions/testuser'%>
+    </div>
+  </div>
+</section>

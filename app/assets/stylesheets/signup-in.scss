@@ -1,0 +1,123 @@
+.new {
+  display: flex;
+}
+
+.side-header {
+  height: 100vh;
+
+  &__top {
+    width: 360px;
+    height: 100%;
+    background-color: rgba(7, 44, 124, 0.87);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .icon{
+    font-size: 30px;
+    color: $cWhite;
+    line-height: 3;
+    margin-right: 5px;
+  }
+
+  &__i{
+    display: flex;
+  }
+
+  &__btn {
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 24px 0;
+    background-color: $bcOrange;
+    color: $cWhite;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.4s;
+
+
+    &:hover {
+      background-color: $cWhite;
+      color: $bcOrange;
+      border: 1px solid $bcOrange;
+      letter-spacing: 4px;
+    }
+  }
+}
+
+.signup-in {
+  width: calc(100vw - 360px);
+  padding: 30px 20px 20px;
+
+  &__title {
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 2px;
+  }
+
+    &__text {
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+      &::after {
+        content: '';
+        display: block;
+        border: 2px solid $bdGreen;
+        width: 60%;
+        margin: 20px auto 20px;
+      }
+    }
+
+  &__box {
+    text-align: center;
+  }
+
+  .field {
+    width: 100%;
+    margin-bottom: 8px;
+
+    &__name {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    &__inner {
+      font-size: 17px;
+      width: 23%;
+      height: 32px;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+
+    &__btn {
+      background-color: $bcOrange;
+      border: 1px solid $bcOrange;
+      font-weight: 600;
+      font-size: 1.5rem;
+      padding: 5px 50px;
+      margin: 17px auto;
+      cursor: pointer;
+      transition: all 0.3s;
+      color: $cWhite;
+      text-decoration: none;
+      &.solid {
+        box-shadow: 0 4px 0 0 $Black;
+        border-radius: 7px;
+
+        &:hover {
+          transform: translate(0, 2px);
+          box-shadow: none;
+        }
+      }
+    }
+    &__check {
+      font-size: 1.6rem;
+      font-weight: 550;
+    }
+  }
+}
