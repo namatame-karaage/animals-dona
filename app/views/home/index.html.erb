@@ -1,71 +1,87 @@
-<header class="header">
-  <div class="header__top">
-    <%= link_to root_path, class: "header__top-text"  do %>
-      <span class="header__animals">Animals</span>
-      <span class="header__domi">Domi</span>
-    <% end %>
-      <%= link_to "寄付・入会のお願い", new_user_registration_path , class: "header__btn"%>
-      <%= link_to "ログイン", new_user_session_path, class: "header__btn" %>
-      <%= render 'devise/sessions/testuser', class: "header__btn"%>
-  </div>
-</header>
+<% if user_signed_in? %>
+  <header class="header">
+    <div class="header__top">
+      <%= link_to root_path, class: "header__top-text"  do %>
+        <span class="header__animals">Animals</span>
+        <span class="header__domi">Domi</span>
+      <% end %>
+      <%= link_to "投稿する", new_problem_path, class: "header__btn"%>
+      <%= link_to "投稿一覧", problems_path , class: "header__btn"%>
+      <%= link_to "MYページ", user_path(current_user) , class: "header__btn "%>
+      <%= link_to 'ユーザー一覧', users_path, class: "header__btn"%>
+      <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "header__btn"%>
+    </div>
+  </header>
+<% else %>
+  <header class="header">
+    <div class="header__top">
+      <%= link_to root_path, class: "header__top-text"  do %>
+        <span class="header__animals">Animals</span>
+        <span class="header__domi">Domi</span>
+      <% end %>
+        <%= link_to "寄付・入会のお願い", new_user_registration_path , class: "header__btn"%>
+        <%= link_to "ログイン", new_user_session_path, class: "header__btn" %>
+        <%= render 'devise/sessions/testuser', class: "header__btn"%>
+    </div>
+  </header>
 
-<div class="wrapper">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="wrapper__title">test</div>
-          <%= image_tag 'top-bird.jpg' , class: "swiper-container__image" %>
-        </div>
-        <div class="swiper-slide">
-          <div class="wrapper__title">test</div>
-          <%= image_tag 'natural.jpeg', class: "swiper-container__image"%>
-        </div>
-        <div class="swiper-slide">
-          <div class="wrapper__title">test</div>
-          <%= image_tag 'flog2.jpeg', class: "swiper-container__image"%>
-        </div>
+  <div class="wrapper">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="wrapper__title">test</div>
+            <%= image_tag 'top-bird.jpg' , class: "swiper-container__image" %>
+          </div>
+          <div class="swiper-slide">
+            <div class="wrapper__title">test</div>
+            <%= image_tag 'natural.jpeg', class: "swiper-container__image"%>
+          </div>
+          <div class="swiper-slide">
+            <div class="wrapper__title">test</div>
+            <%= image_tag 'flog2.jpeg', class: "swiper-container__image"%>
+          </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
   </div>
-</div>
 
-<main class="domination">
-  <div class="domination__box">
-    <div class="domination__info">
-      <h1 class="domination__text">Hello</h1>
-      <p class="domination__inner">about me about meabout meabout meabout me</p>
-    </div>
-    <div class="container">
-      <div class="container__left-box">
-        <ul class="container__inner">
-          <li class="container__info show">
-            <%= image_tag 'natural.jpeg', class: "container__img"%>
-            <p>毎月1000円だとこれだけの命が助かります！</p>
-          </li>
-          <li class="container__info">
-            <%= image_tag 'natural.jpeg', class: "container__img"%>
-            <p>test2</p>
-          </li>
-          <li class="container__info">
-            <%= image_tag 'natural.jpeg', class: "container__img"%>
-            <p>test3</p>
-          </li>
-        </ul>
+  <main class="domination">
+    <div class="domination__box">
+      <div class="domination__info">
+        <h1 class="domination__text">Hello</h1>
+        <p class="domination__inner">about me about meabout meabout meabout me</p>
       </div>
-      <div class="container__right-box">
-        <h1 class="container__title">毎月の支援</h1>
-        <ul  class="container__img-text">
-          <li><a href="#" id="senen" class="container__items active">1,000円</a></li>
-          <li><a href="#"　id="gosenen" class="container__items">5,000円</a></li>
-          <li><a href="#"　id="itimanen" class="container__items">10,000円</a></li>
-        </ul>
-          <%= link_to "寄付・入会のお願い", new_user_registration_path , class: "header__btn"%>
+      <div class="container">
+        <div class="container__left-box">
+          <ul class="container__inner">
+            <li class="container__info show">
+              <%= image_tag 'natural.jpeg', class: "container__img"%>
+              <p>毎月1000円だとこれだけの命が助かります！</p>
+            </li>
+            <li class="container__info">
+              <%= image_tag 'natural.jpeg', class: "container__img"%>
+              <p>test2</p>
+            </li>
+            <li class="container__info">
+              <%= image_tag 'natural.jpeg', class: "container__img"%>
+              <p>test3</p>
+            </li>
+          </ul>
+        </div>
+        <div class="container__right-box">
+          <h1 class="container__title">毎月の支援</h1>
+          <ul  class="container__img-text">
+            <li><a href="#" id="senen" class="container__items active">1,000円</a></li>
+            <li><a href="#"　id="gosenen" class="container__items">5,000円</a></li>
+            <li><a href="#"　id="itimanen" class="container__items">10,000円</a></li>
+          </ul>
+            <%= link_to "寄付・入会のお願い", new_user_registration_path , class: "header__btn"%>
+        </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>
+<% end %>
 <footer class="footer">@AnimalsDonation  2020</footer>
 

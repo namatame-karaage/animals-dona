@@ -1,5 +1,4 @@
 
-
 <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" %>
 <%= @user.username%>
 <% if @user.id == current_user.id%>
@@ -7,3 +6,21 @@
   <%= link_to '編集ページ', edit_user_path(@user) %>
 <% end %>
 <%= @user.profile%>
+
+<% @user.problems.each do |problem|%>
+  <%= attachment_image_tag problem, :image %>
+  <%= link_to problem_path(problem) do %>
+    詳細
+  <%end%>
+  <% if @user.id == current_user.id%>
+    <%= link_to edit_problem_path(problem) do %>
+      編集
+    <% end %>
+    <%= link_to problem_path(problem), method: :delete, data: { confirm: "本当に削除しますか？"} do%>
+      削除
+    <% end %>
+  <% end %>
+  <%= problem.updated_at.strftime("%Y-%m-%d %H:%M")%>
+<% end %>
+
+

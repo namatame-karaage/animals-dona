@@ -1,0 +1,22 @@
+
+<% if @problem.errors.any?%>
+  <h2><%= pluralize(@problem.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
+  <ul>
+    <% @problem.errors.full_messages.each do |message|%>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with model: @problem do |f|%>
+  <%= f.label :title, 'タイトル'%>
+  <%= f.text_field :title%>
+
+  <%= f.label :body , '詳細'%>
+  <%= f.text_area :body%>
+
+  <%= f.label :image, '写真'%>
+  <%= f.attachment_field :image%>
+
+  <%= f.submit '編集完了'%>
+<% end %>

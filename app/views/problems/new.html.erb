@@ -1,0 +1,50 @@
+<section class="new">
+  <div class="side-header">
+    <div class="side-header__top">
+      <%= link_to root_path, class: "header__top-text"  do %>
+        <span class="header__animals">Animals</span>
+        <span class="header__domi">Domi</span>
+      <% end %>
+      <div class="side-header__i">
+        <i class="fab fa-themeisle icon"></i>
+        <%= link_to "トップへ戻る", root_path , class: "side-header__btn"%>
+      </div>
+      <div class="side-header__i">
+        <i class="fab fa-phoenix-framework icon"></i>
+        <%= link_to "寄付・入会のお願い", new_user_registration_path , class: "side-header__btn"%>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <% if @problem.errors.any?%>
+    <h2><%= pluralize(@problem.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
+    <ul>
+      <% @problem.errors.full_messages.each do |message|%>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="message">
+    <div class="message__container">
+      <h1 class="message__title">投稿画面</h1>
+        <%= form_with model: @problem do |f|%>
+        <div class="message__box">
+          <%= f.label :title, 'タイトル'%>
+          <%= f.text_field :title%>
+
+          <%= f.label :body , '詳細'%>
+          <%= f.text_area :body%>
+
+          <%= f.label :image, '写真'%>
+          <%= f.attachment_field :image%>
+
+          <%= f.submit '投稿する'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

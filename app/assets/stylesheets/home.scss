@@ -22,6 +22,12 @@
     align-items: center;
   }
 
+  &__top-text {
+    &:hover{
+      opacity: .7;
+    }
+  }
+
   &__top-text,
   &__btn {
     text-decoration: none;

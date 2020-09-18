@@ -1,0 +1,16 @@
+<%= @problem.title%>
+<%= attachment_image_tag @problem, :image%>
+
+<%= simple_format @problem.body%>
+
+
+<% if @problem.user.id == current_user.id%>
+  <%= link_to '編集する', edit_problem_path(@problem)%>
+<% end %>
+
+<%= @problem.user.username%>
+<%= @problem.user.profile%>
+
+<%= link_to user_path(@problem.user) do%>
+  <%= @problem.user.username%>さんのページへ
+<% end %>

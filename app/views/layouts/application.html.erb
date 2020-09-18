@@ -23,15 +23,6 @@
         <p class="alert"><%= alert %></p>
       </div>
     <% end %>
-
-    <header class="header">
-      <div class="header__top">
-        <% if user_signed_in? %>
-          <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "header__btn"%>
-        <% end %>
-      </div>
-    </header>
-
     <%= yield %>
 
 
