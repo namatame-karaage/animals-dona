@@ -17,7 +17,7 @@ class ProblemsController < ApplicationController
     @problem = Problem.new(problem_params)
     @problem.user_id = current_user.id
     if @problem.save
-      redirect_to problem_path(@problem), notice:'投稿に成功しました'
+      redirect_to problem_path(@problem), notice: "#{@problem.title}投稿に成功しました"
     else
       render :new
     end
@@ -42,7 +42,7 @@ class ProblemsController < ApplicationController
   def destroy
     @problem = Problem.find(params[:id])
     @problem.destroy
-    redirect_to problems_path(@problem)
+    redirect_to problems_path
   end
 
   private
