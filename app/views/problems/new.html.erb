@@ -9,10 +9,10 @@
         <i class="fab fa-themeisle icon"></i>
         <%= link_to "トップへ戻る", root_path , class: "side-header__btn"%>
       </div>
-      <div class="side-header__i">
-        <i class="fab fa-phoenix-framework icon"></i>
-        <%= link_to "寄付・入会のお願い", new_user_registration_path , class: "side-header__btn"%>
-      </div>
+        <%= link_to "投稿一覧", problems_path , class: "side-header__btn"%>
+        <%= link_to "MYページ", user_path(current_user) , class: "side-header__btn "%>
+        <%= link_to 'ユーザー一覧', users_path, class: "side-header__btn"%>
+        <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "side-header__btn"%>
     </div>
   </div>
 
@@ -30,16 +30,16 @@
       <h1 class="message__title">投稿画面</h1>
         <%= form_with model: @problem do |f|%>
         <div class="message__box">
-          <%= f.label :title, 'タイトル'%>
-          <%= f.text_field :title%>
+          <%= f.label :title, 'タイトル', class: "field__name"%>
+          <%= f.text_field :title, class: "field__post"%>
 
-          <%= f.label :body , '詳細'%>
-          <%= f.text_area :body%>
+          <%= f.label :body , '詳細', class: "field__name"%>
+          <%= f.text_area :body, class: "field__body"%>
 
-          <%= f.label :image, '写真'%>
-          <%= f.attachment_field :image%>
+          <%= f.label :image, '写真', class: "field__name"%>
+          <%= f.attachment_field :image, class: "field__image-box"%>
 
-          <%= f.submit '投稿する'%>
+          <%= f.submit '投稿する', class: "field__btn solid"%>
         </div>
       <% end %>
     </div>

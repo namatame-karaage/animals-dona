@@ -1,13 +1,33 @@
-一覧
+<section class="new">
+  <div class="side-header">
+    <div class="side-header__top">
+      <%= link_to root_path, class: "header__top-text"  do %>
+        <span class="header__animals">Animals</span>
+        <span class="header__domi">Domi</span>
+      <% end %>
+      <div class="side-header__i">
+        <i class="fab fa-themeisle icon"></i>
+        <%= link_to "トップへ戻る", root_path , class: "side-header__btn"%>
+      </div>
+        <%= link_to "投稿する", new_problem_path, class: "side-header__btn"%>
+        <%= link_to "MYページ", user_path(current_user) , class: "side-header__btn "%>
+        <%= link_to 'ユーザー一覧', users_path, class: "side-header__btn"%>
+        <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "side-header__btn"%>
+    </div>
+  </div>
+  <div class="post-index">
+    <% @problems.each do |problem|%>
+      <%= problem.title%>
+      <%= link_to problem_path(problem) do %>
+        <%= attachment_image_tag problem, :image%>
+      <% end %>
+      <%= problem.body%>
+      <%= link_to user_path(problem.user.id) do %>
+        <%= attachment_image_tag problem.user, :profile_image, fallback: "no-image.png"%>
+      <% end %>
 
-<% @problems.each do |problem|%>
-  <%= link_to problem_path(problem) do %>
-    <%= attachment_image_tag problem, :image%>
-  <% end %>
-  <%= link_to user_path(problem.user.id) do %>
-    <%= attachment_image_tag problem.user, :profile_image, fallback: "no-image.png"%>
-  <% end %>
-
-  <%= link_to problem.user.username, user_path(problem.user.id)%>
-  <%= problem.updated_at.strftime("%Y-%m-%d %H:%M")%>
-<%end %>
+      <%= link_to problem.user.username, user_path(problem.user.id)%>
+      <%= problem.updated_at.strftime("%Y-%m-%d %H:%M")%>
+    <%end %>
+  </div>
+</section>

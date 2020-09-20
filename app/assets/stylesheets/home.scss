@@ -61,6 +61,7 @@
     transition: all 0.4s;
 
     &:hover {
+      text-decoration: none;
       background-color: $cWhite;
       color: $bcOrange;
       border: 1px solid $bcOrange;

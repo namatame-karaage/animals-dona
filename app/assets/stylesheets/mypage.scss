@@ -1,0 +1,134 @@
+@import "modules/colors";
+
+.content {
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+
+  .mypage {
+    &__box {
+      width: 50%;
+      margin: 0 auto 30px;
+      padding: 10px;
+      display: flex;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+      border-radius: 5px;
+    }
+
+    &__image {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+    }
+
+    &__username,
+    &__edit {
+      font-size: 2.5rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__profile-box {
+      width: 100%;
+      padding: 30px 0;
+    }
+
+    &__title-info {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.post-index {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+
+  &__box {
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  }
+
+  &__link {
+    text-decoration: none;
+    transition: opacity .3s;
+    text-align: center;
+
+    &:hover {
+      opacity: .6;
+      text-decoration: none;
+    }
+  }
+
+  &__image {
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    color: $Black;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+
+  .edit-delete {
+    text-decoration: none;
+  }
+  .edit-btn {
+    padding: 4px 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: $bcOrange;
+    color: $cWhite;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: $cWhite;
+      color: $bcOrange;
+      border: 1px solid $bcOrange;
+    }
+  }
+  .delete-btn {
+    padding: 4px 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: $bgOrangered;
+    color: $cWhite;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: $cWhite;
+      color: $bgOrangered;
+      border: 1px solid $Black;
+    }
+  }
+}
+.data {
+  opacity: .7;
+  font-size: 600;
+  margin-top: 5px;
+}
+
+.count {
+  width: 160px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+  opacity: .4;
+}

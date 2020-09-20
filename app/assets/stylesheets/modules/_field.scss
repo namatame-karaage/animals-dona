@@ -1,0 +1,67 @@
+.field {
+  width: 100%;
+  margin-bottom: 8px;
+
+  &__name {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+
+  &__inner {
+    font-size: 17px;
+    width: 23%;
+    height: 32px;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+
+  &__btn {
+    background-color: $bcOrange;
+    border: 1px solid $bcOrange;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 5px 50px;
+    margin: 17px auto;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: $cWhite;
+    text-decoration: none;
+    &.solid {
+      box-shadow: 0 4px 0 0 $Black;
+      border-radius: 7px;
+
+      &:hover {
+        transform: translate(0, 2px);
+        box-shadow: none;
+      }
+    }
+  }
+  &__check {
+    font-size: 1.6rem;
+    font-weight: 550;
+  }
+
+  &__post {
+    width: 40%;
+    height: 28px;
+    font-size: 1.7rem;
+  }
+
+  &__body {
+    width: 65%;
+    height: 100px;
+    font-size: 1.7rem;
+    padding: 1px;
+  }
+  &__image-box {
+    border: 1px solid $Black;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  &__post,
+  &__body{
+    margin-bottom: 20px;
+  }
+}

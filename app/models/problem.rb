@@ -5,6 +5,6 @@ class Problem < ApplicationRecord
   with_options presence: true do
     validates :title
     validates :body
-    validates :iamge
+    validates :image
   end
 end

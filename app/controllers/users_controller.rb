@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   before_action :gest_test_user, only: [:edit,:update,:destroy]
 
   def index
-    @users = User.all
+    # @users = User.all
+    @users = User.all.page(params[:page]).per(3)
   end
 
   def show
