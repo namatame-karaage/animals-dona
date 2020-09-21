@@ -15,19 +15,32 @@
         <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "side-header__btn"%>
     </div>
   </div>
-  <div class="post-index">
-    <% @problems.each do |problem|%>
-      <%= problem.title%>
-      <%= link_to problem_path(problem) do %>
-        <%= attachment_image_tag problem, :image%>
-      <% end %>
-      <%= problem.body%>
-      <%= link_to user_path(problem.user.id) do %>
-        <%= attachment_image_tag problem.user, :profile_image, fallback: "no-image.png"%>
-      <% end %>
 
-      <%= link_to problem.user.username, user_path(problem.user.id)%>
-      <%= problem.updated_at.strftime("%Y-%m-%d %H:%M")%>
-    <%end %>
+  <div class="post-index">
+    <h1 class="message__title">投稿一覧</h1>
+    <div class="post-index__container">
+      <% @problems.each do |problem|%>
+        <div class="post-index__card-box">
+          <div class="post-index__user-inner">
+            <%= link_to user_path(problem.user.id) do %>
+              <%= attachment_image_tag problem.user, :profile_image, fallback: "no-image.png", size: "72x72", style: "border-radius: 50%;"%>
+              <p><%= link_to problem.user.username, user_path(problem.user.id),  class: "post-index__username"%></p>
+            <% end %>
+          </div>
+          <div class="post-index__info">
+            <div class="post-index__info-post">
+              <%= link_to problem_path(problem), class: "post-index__index-image" do %>
+                <%= attachment_image_tag problem, :image, size: "75x75", style: "border-radius: 10%;" %>
+              <% end %>
+            </div>
+            <div class="post-index__right">
+              <h2 class="post-index__title"><%= problem.title%></h2>
+              <p class="date">作成日: <%= problem.updated_at.strftime("%Y-%m-%d %H:%M")%></p>
+            </div>
+          </div>
+        </div>
+      <%end %>
+      <div class="paginate"><%= paginate @problems %></div>
+    </div>
   </div>
 </section>

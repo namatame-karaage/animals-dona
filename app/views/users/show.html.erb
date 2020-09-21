@@ -39,12 +39,12 @@
         </div>
     </div>
 
-    <div class="post-index">
+    <div class="post-show">
       <% @user.problems.each do |problem|%>
-        <div class="post-index__box">
-          <%= link_to problem_path(problem),class: "post-index__link" do%>
-            <%= attachment_image_tag problem, :image ,class: "post-index__image"%>
-            <p class="post-index__title"><%= problem.title%></p>
+        <div class="post-show__box">
+          <%= link_to problem_path(problem),class: "post-show__link" do%>
+            <%= attachment_image_tag problem, :image ,class: "post-show__image"%>
+            <p class="post-show__title"><%= problem.title%></p>
           <%end%>
           <% if @user.id == current_user.id%>
             <%= link_to edit_problem_path(problem), class: "edit-delete" do %>

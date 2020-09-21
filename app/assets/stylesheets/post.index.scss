@@ -1,0 +1,115 @@
+@import 'modules/colors';
+
+.post-index {
+  width: 100%;
+  height: 100%;
+
+  &__container {
+    padding: 5px 20px;
+  }
+
+  &__card-box {
+    display: flex;
+    width: 60%;
+    margin: 0 auto 12px;
+    padding: 4px;
+    border-bottom: 1px solid $Black;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 20px 5px;
+    transition: all .5s;
+    &:hover {
+      width: 70%;
+      opacity: .8;
+    }
+  }
+
+  &__info {
+    display: flex;
+  }
+  &__info-post {
+    margin-right: 10px;
+  }
+  &__title{
+    width: 100%;
+    font-size: 1.4rem;
+    color: $Black;
+  }
+
+  &__index-image {
+    width: 50px;
+    height: 50px;
+    transition: opacity .3s;
+    text-decoration: none;
+    transition: opacity .3s;
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__user-inner {
+    text-align: center;
+    margin-right: 20px;
+    transition: opacity .3s;
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__username {
+    text-decoration: none;
+    color: $Black;
+    font-size: 1.2rem;
+  }
+
+  &__right {
+    max-width: 800px;
+    margin-top: 12px;
+  }
+
+  &__body{
+    width: 500px;
+  }
+}
+.date {
+  margin-top: 45px;
+  padding: 5px 5px 0 0;
+  opacity: .5;
+}
+
+// ページネーション
+.pagination {
+  height: 100px;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.pagination a {
+  background-color: grey;
+  text-decoration: none;
+}
+
+.pagination * {
+  color: white;
+  margin: 0 7px;
+  text-decoration: none;
+  padding: 12.5px 18.5px;
+  border-radius: 25px;
+}
+
+.current {
+  color: white;
+  background: #93c9ff;
+  border-radius: 22.5px;
+}
+
+.pagination a:hover {
+  background: #93c9ff;
+}
+
+.pagination .disabled {
+  color: #666666;
+  padding: 11px 17px;
+  border: 1px solid #666666;
+  border-radius: 23px;
+}

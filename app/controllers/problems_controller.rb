@@ -2,7 +2,7 @@ class ProblemsController < ApplicationController
   before_action :authenticate_user!, expect: [:index]
 
   def index
-    @problems = Problem.all
+    @problems = Problem.all.page(params[:page]).per(4)
   end
 
   def show
