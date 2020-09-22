@@ -40,6 +40,9 @@
 .post-index__index-image:hover {
   opacity: 0.7;
 }
+.post-index__user-title {
+  text-decoration: none;
+}
 .post-index__user-inner {
   text-align: center;
   margin-right: 20px;

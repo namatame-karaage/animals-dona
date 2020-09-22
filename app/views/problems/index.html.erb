@@ -34,8 +34,10 @@
               <% end %>
             </div>
             <div class="post-index__right">
-              <h2 class="post-index__title"><%= problem.title%></h2>
-              <p class="date">作成日: <%= problem.updated_at.strftime("%Y-%m-%d %H:%M")%></p>
+              <%= link_to problem_path(problem), class: "post-index__user-title" do %>
+                <h2 class="post-index__title"><%= problem.title%></h2>
+              <% end %>
+                <p class="date">作成日: <%= problem.updated_at.strftime("%Y-%m-%d %H:%M")%></p>
             </div>
           </div>
         </div>

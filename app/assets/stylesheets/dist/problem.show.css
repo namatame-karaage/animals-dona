@@ -1,0 +1,62 @@
+.problem-show {
+  width: 100%;
+  height: 100%;
+}
+.problem-show__container {
+  height: 400px;
+  margin-top: 30px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 20px 5px;
+}
+.problem-show__card {
+  display: flex;
+  margin-bottom: 16px;
+}
+.problem-show__image {
+  width: 280px;
+  height: 280px;
+  border-radius: 10px;
+}
+.problem-show__show-box {
+  width: 100%;
+  margin-left: 30px;
+  font-weight: 600;
+}
+.problem-show__info {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 10px;
+}
+.problem-show__info::after {
+  content: "";
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 90%;
+  margin-top: 3px;
+}
+.problem-show__title {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  margin-right: 40px;
+}
+.problem-show__title-name {
+  font-size: 2rem;
+}
+.problem-show__title-body {
+  display: inline-block;
+  font-size: 3rem;
+}
+
+.problem-user {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+.problem-user__post {
+  font-size: 1.3rem;
+}
+.problem-user__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}

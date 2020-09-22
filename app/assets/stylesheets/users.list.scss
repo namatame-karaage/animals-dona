@@ -1,1 +1,44 @@
 @import 'modules/colors';
+
+.users-list {
+  width: 100%;
+  height: 100%;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  &__card {
+    width: 30%;
+    height: 200px;
+    margin: 0 auto 12px;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid $Black;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 20px 5px;
+  }
+  &__profile-name{
+    text-decoration: none;
+    transition: opacity .3s;
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: $Black;
+    margin: 4px 0;
+  }
+
+  &__image {
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+  }
+}
