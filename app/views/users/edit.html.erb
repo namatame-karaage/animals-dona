@@ -1,5 +1,3 @@
- <h1 class="top-name">編集ページ</h1>
-
 
 <% if @user.errors.any?%>
   <h2><%= pluralize(@user.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
@@ -9,36 +7,60 @@
     <% end %>
   </ul>
 <% end %>
-<section class="section">
-  <div class="container">
-    <%= form_with model: @user do |f| %>
-      <div class="field">
-        <%# <i class="fas fa fa-user"></i> %>
-        <%= f.label :username, 'お名前' %><br />
-        <%= f.text_field :username%>
-      </div>
 
-      <div class="field">
-        <%# <i class="fas fa fa-envelope"></i> %>
-        <%= f.label :email,'メールアドレス' %><br />
-        <%= f.email_field :email%>
+<section class="new">
+  <div class="side-header">
+    <div class="side-header__top">
+      <%= link_to root_path, class: "header__top-text"  do %>
+        <span class="header__animals">Animals</span>
+        <span class="header__domi">Domi</span>
+      <% end %>
+      <div class="side-header__i">
+        <i class="fab fa-themeisle icon"></i>
+        <%= link_to "トップへ戻る", root_path , class: "side-header__btn"%>
       </div>
+        <%= link_to "投稿する", new_problem_path, class: "side-header__btn"%>
+        <%= link_to "投稿一覧", problems_path , class: "side-header__btn"%>
+        <%= link_to "MYページ", user_path(current_user) , class: "side-header__btn "%>
+        <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "side-header__btn"%>
+    </div>
+  </div>
 
-      <div class="field">
-        <%# <i class="fas fa fa-id-card"></i> %>
-        <%= f.label :profile , "プロフィール"%><br />
-        <%= f.text_area :profile %>
-      </div>
 
-      <div class="field">
-        <%# <i class="fas fa fa-id-card"></i> %>
-        <%= f.label :profile_image , "プロフィール画像"%><br />
-        <%= f.attachment_field :profile_image %>
-      </div>
+  <div class="message">
+    <div class="message__container">
+      <h1 class="message__title">ユーザー編集</h1>
+        <%= form_with model: @user do |f| %>
+        <div class="message__box">
+          <div class="field">
+            <%# <i class="fas fa fa-user"></i> %>
+            <%= f.label :username, 'お名前', class: "field__name" %><br />
+            <%= f.text_field :username, class: "field__post"%>
+          </div>
 
-      <div class="actions">
-        <%= f.submit "編集完了", class: "filed__btn" %>
-      </div>
-    <% end %>
+          <div class="field">
+            <%# <i class="fas fa fa-envelope"></i> %>
+            <%= f.label :email,'メールアドレス' , class: "field__name"%><br />
+            <%= f.email_field :email, class: "field__post"%>
+          </div>
+
+          <div class="field">
+            <%# <i class="fas fa fa-id-card"></i> %>
+            <%= f.label :profile , "プロフィール", class: "field__name"%><br />
+            <%= f.text_area :profile, class: "field__body" %>
+          </div>
+
+          <div class="field">
+            <%# <i class="fas fa fa-id-card"></i> %>
+            <%= f.label :profile_image , "プロフィール画像", class: "field__name"%><br />
+            <%= f.attachment_field :profile_image , class: "field__image-box"%>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "更新する", class: "side-header__btn" %>
+          </div>
+        </div>
+        <% end %>
+     </div>
   </div>
 </section>

@@ -28,17 +28,20 @@
   <div class="message">
     <div class="message__container">
       <h1 class="message__title">投稿画面</h1>
-        <%= form_with model: @problem do |f|%>
+      <%= form_with model: @problem do |f|%>
         <div class="message__box">
-          <%= f.label :title, 'タイトル', class: "field__name"%>
-          <%= f.text_field :title, class: "field__post"%>
-
-          <%= f.label :body , '詳細', class: "field__name"%>
-          <%= f.text_area :body, class: "field__body"%>
-
-          <%= f.label :image, '写真', class: "field__name"%>
-          <%= f.attachment_field :image, class: "field__image-box"%>
-
+          <div class="field">
+            <%= f.label :title, 'タイトル', class: "field__name"%>
+            <%= f.text_field :title, class: "field__post"%>
+          </div>
+          <div class="field">
+            <%= f.label :body , '詳細', class: "field__name"%>
+            <%= f.text_area :body, class: "field__body"%>
+          </div>
+          <div class="field">
+            <%= f.label :image, '写真', class: "field__name"%>
+            <%= f.attachment_field :image, class: "field__image-box"%>
+          </div>
           <%= f.submit '投稿する', class: "field__btn solid"%>
         </div>
       <% end %>
