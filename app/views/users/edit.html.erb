@@ -51,9 +51,12 @@
           </div>
 
           <div class="field">
-            <%# <i class="fas fa fa-id-card"></i> %>
-            <%= f.label :profile_image , "プロフィール画像", class: "field__name"%><br />
-            <%= f.attachment_field :profile_image , class: "field__image-box"%>
+            <div id="image-preview">
+              <%= f.label :profile_image , "プロフィール画像", class: "field__name"%><br />
+              <%# <i class="fas fa fa-id-card"></i> %>
+              <%= attachment_image_tag @user, :profile_image, class: "img-square", fallback: "no_image.jpg", size:"150x150" ,style: "border-radius: 50%"%>
+            </div>
+              <%= f.attachment_field :profile_image , id: "preview", class: "field__image-box"%>
           </div>
 
           <div class="actions">
