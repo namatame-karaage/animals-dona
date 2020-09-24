@@ -4,7 +4,6 @@
 
 
 
-
 // header/style
 .header {
   width: 100%;
@@ -18,7 +17,7 @@
   }
 
   &__top-text {
-    &:hover{
+    &:hover {
       text-decoration: none;
       opacity: .7;
     }
@@ -73,23 +72,24 @@
     margin: 1px;
   }
 }
+
 // topページ簡単ログインボタン
 .top-btn {
 
   padding: 8px 16px;
-    font-weight: 600;
-    background-color: $bcOrange;
-    color: $cWhite;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.4s;
+  font-weight: 600;
+  background-color: $bcOrange;
+  color: $cWhite;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.4s;
 
-    &:hover {
-      background-color: $cWhite;
-      color: $bcOrange;
-      border: 1px solid $bcOrange;
-    }
+  &:hover {
+    background-color: $cWhite;
+    color: $bcOrange;
+    border: 1px solid $bcOrange;
+  }
 }
 
 // ヒーロースライダーは、modules/swiper.scssに記述してます
@@ -98,7 +98,7 @@
 .domination {
   width: 100%;
   height: 100%;
-  background-color: $bcOrange;
+  background-color: $cWhite;
 
   &__box {
     width: 70%;
@@ -114,6 +114,7 @@
     font-size: 4.5rem;
     font-family: 'Ubuntu', sans-serif;
     padding: 30px 0;
+    text-align: center;
 
     &::after {
       content: '';
@@ -125,85 +126,117 @@
   }
 
   &__inner {
-    width: 60%;
+    width: 70%;
     font-size: 2.2rem;
     margin: 0 auto 30px;
   }
+}
 
-  .container {
+// タブメニュ-
+.tabs-menu {
+  width: 100%;
+  padding: 50px 0;
+  background-color: $bcOrange;
+
+  &__container {
+    margin: 0 auto;
+    width: 70%;
     display: flex;
-    justify-content: center;
+  }
+}
 
-    &__title {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+.menu {
+  position: relative;
+  list-style: none;
+  width: 270px;
+  margin-right: 20px;
+  background-color: $cWhite;
+  padding: 15px 10px;
+  border-radius: 5px;
 
-    &__inner {
-      list-style: none;
-    }
-    &__info {
-      display: none;
-    }
-    .show {
-      display: block;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 104%;
+    border: 15px solid transparent;
+    border-left: 16px solid $cWhite;
+  }
 
-    &__right-box {
-      margin-left: 10px;
+  & li {
+    display: inline-block;
+    margin-bottom: 40px;
 
+    &:nth-child(1) {
+      margin-top: 40px;
     }
+  }
 
-    &__title {
-      font-size: 20px;
-    }
+  &__item {
+    display: inline-block;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    width: 233px;
+    height: 40px;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px;
+    color: $bcOrange;
+    background-color: rgb(218, 211, 211);
+    border-radius: 20px;
+    transition: all .4s;
+    cursor: pointer;
 
-    &__img {
-      width: 300px;
-      height: 130px;
-    }
-
-    &__img-text {
-      display: flex;
-      list-style: none;
-      font-size: 0;
-      padding: 0;
-      margin-bottom: 50px;
-    }
-
-    &__items {
-      display: inline-block;
-      text-decoration: none;
-      background-color: $Black;
-      color: $cWhite;
-      padding: 5px 10px;
-      border-radius: 16px;
-      margin-left: 10px;
-      font-size: 2rem;
-      &:hover {
-        opacity: 0.5;
-        transition: .8s;
-      }
-    }
-
-    .active {
-      background: #353d3e;
+    &:hover {
+      background: $bcOrange;
       color: #fff;
-    }
-
-    &__btn {
-      display: inline-block;
-      text-decoration: none;
-      background-color: $Black;
-      color: $cWhite;
-      padding: 5px 10px;
-      border-radius: 16px;
-      margin-top: 20px;
-      font-size: 2.6rem;
     }
   }
 }
 
+.active {
+  background: $bcOrange;
+  color: #fff;
+}
+
+ul.menu li :not(.active):hover {
+  opacity: 0.5;
+  transition: .8s;
+}
+
+.contents {
+  padding: 10px;
+  text-align: center;
+
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+
+  .content {
+    list-style: none;
+    font-size: 14px;
+    padding: 20px 10px;
+    line-height: 1.4;
+    background: $cWhite;
+    min-height: 150px;
+    display: none;
+    border-radius: 5px;
+
+    &.show {
+      display: block;
+    }
+  }
+}
 
 
 .footer {

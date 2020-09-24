@@ -59,38 +59,50 @@
   <main class="domination">
     <div class="domination__box">
       <div class="domination__info">
-        <h1 class="domination__text">Hello</h1>
-        <p class="domination__inner">about me about meabout meabout meabout me</p>
-      </div>
-      <div class="container">
-        <div class="container__left-box">
-          <ul class="container__inner">
-            <li class="container__info show">
-              <%= image_tag 'natural.jpeg', class: "container__img"%>
-              <p>毎月1000円だとこれだけの命が助かります！</p>
-            </li>
-            <li class="container__info">
-              <%= image_tag 'natural.jpeg', class: "container__img"%>
-              <p>test2</p>
-            </li>
-            <li class="container__info">
-              <%= image_tag 'natural.jpeg', class: "container__img"%>
-              <p>test3</p>
-            </li>
-          </ul>
-        </div>
-        <div class="container__right-box">
-          <h1 class="container__title">毎月の支援</h1>
-          <ul  class="container__img-text">
-            <li><a href="#" id="senen" class="container__items active">1,000円</a></li>
-            <li><a href="#"　id="gosenen" class="container__items">5,000円</a></li>
-            <li><a href="#"　id="itimanen" class="container__items">10,000円</a></li>
-          </ul>
-            <%= link_to "寄付・入会のお願い", new_user_registration_path , class: "header__btn"%>
-        </div>
+        <h1 class="domination__text">About</h1>
+        <p class="domination__inner">
+          NGO・NPO関係の営業職の際にあまりにもアフリカなどの現状や日本だったらちょっとしたことで助けられることを知らない方が多く見られました。
+          今回、動物が好きで上記のことは、動物も同じだと思い、動物・環境などを専門にしたコミュニティを作りました。
+          まずは、知ってもらいたいと思い作りました。
+        </p>
       </div>
     </div>
   </main>
+
+  <div class="tabs-menu">
+    <h1 class="domination__text">これだけで助かります！</h1>
+    <div class="tabs-menu__container">
+      <ul class="menu">
+        <li><a class="menu__item active">1000円</a></li>
+        <li><a class="menu__item">3000円</a></li>
+        <li><a class="menu__item">5000円</a></li>
+      </ul>
+
+      <ul class="contents">
+        <li class="content show">
+          <%= image_tag 'penpen.jpeg',size: "650x200"%>
+          <h2 class="contents__title">1年間その支援を継続すると…</h2>
+          <p class="contents__text">
+            南米のチリで海の大切さを伝え、地域の人たちにもその保全に参加してもらう普及活動を1回実施できます。
+          </p>
+        </li>
+        <li class="content">
+          <%= image_tag 'tiger.jpeg',size: "650x200"%>
+          <h2 class="contents__title">1年間その支援を継続すると…</h2>
+          <p class="contents__text">
+            ロシアでケガをしたトラを野生復帰させるためのリハビリ活動を6日間、支えることができます。
+          </p>
+        </li>
+        <li class="content">
+          <%= image_tag 'shizenn',size: "650x200"%>
+          <h2 class="contents__title">1年間その支援を継続すると…</h2>
+          <p class="contents__text">
+            スマトラの熱帯林で、違法伐採や野生動物の密猟を防ぐパトロールを14日間、支えることができます。
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
 <% end %>
 <footer class="footer">@AnimalsDonation  2020</footer>
 
