@@ -8,8 +8,9 @@
   margin: 0 auto 30px;
   padding: 10px;
   display: flex;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .content .mypage__image {
   width: 140px;
@@ -43,6 +44,7 @@
   padding: 10px;
   margin: 10px;
   text-align: center;
+  background-color: white;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }

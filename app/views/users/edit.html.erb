@@ -28,8 +28,8 @@
 
 
   <div class="message">
-    <div class="message__container">
-      <h1 class="message__title">ユーザー編集</h1>
+    <h1 class="message__title">ユーザー編集</h1>
+      <div class="message__container">
         <%= form_with model: @user do |f| %>
         <div class="message__box">
           <div class="field">
@@ -60,7 +60,7 @@
           </div>
 
           <div class="actions">
-            <%= f.submit "更新する", class: "side-header__btn" %>
+            <%= f.submit "更新", class: "side-header__btn" %>
           </div>
         </div>
         <% end %>

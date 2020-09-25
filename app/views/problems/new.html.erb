@@ -40,10 +40,11 @@
           </div>
           <div class="field">
             <%= f.label :image, '写真', class: "field__name"%>
-            <%= f.attachment_field :image, class: "field__image-box"%>
+            <%= attachment_image_tag @problem, :image, class: "img-square", fallback: "noimage.png", size:"150x150" ,style: "border-radius: 50%"%>
           </div>
-          <%= f.submit '投稿する', class: "field__btn solid"%>
+            <%= f.attachment_field :image, id: "preview", class: "field__image-box"%>
         </div>
+          <%= f.submit '投稿する', class: "field__btn solid"%>
       <% end %>
     </div>
   </div>

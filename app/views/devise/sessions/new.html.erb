@@ -11,13 +11,13 @@
       </div>
       <div class="side-header__i">
         <i class="fab fa-phoenix-framework icon"></i>
-        <%= link_to "寄付・入会のお願い", new_user_registration_path , class: "side-header__btn"%>
+        <%= link_to "入会のお願い", new_user_registration_path , class: "side-header__btn"%>
       </div>
     </div>
   </div>
 
   <div class="signup-in">
-    <h2 class="signup-in__title">ログインページ</h2>
+    <h2 class="message__title">ログインページ</h2>
     <p class="signup-in__text">入力の方お願いします</p>
       <div class="signup-in__box">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

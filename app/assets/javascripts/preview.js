@@ -1,6 +1,6 @@
 $(function () {
   $('#preview').on('change', function (e) {
-  var reader = new FileReader();
+  let reader = new FileReader();
   reader.onload = function (e) {
       $(".img-square").attr('src', e.target.result);
   }

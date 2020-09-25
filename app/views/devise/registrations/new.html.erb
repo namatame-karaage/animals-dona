@@ -17,7 +17,7 @@
   </div>
 
   <div class="signup-in">
-    <h2 class="signup-in__title">寄付・入会のお願い</h2>
+    <h2 class="message__title">入会のお願い</h2>
     <p class="signup-in__text">お手数ですがご登録お願いします</p>
       <div class="signup-in__box">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -41,7 +41,7 @@
           <div class="field">
             <%= f.label :password, class: "field__name"  %>
             <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> 文字以上 半角英数字)</em>
+            <em>(<%= @minimum_password_length %> 文字以上)</em>
             <% end %><br />
             <%= f.password_field :password, autocomplete: "new-password", class: "field__inner" %>
           </div>

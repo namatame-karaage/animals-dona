@@ -10,13 +10,14 @@
   width: 60%;
   margin: 0 auto 12px;
   padding: 4px;
+  background-color: white;
   border-bottom: 1px solid black;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 20px 5px;
   transition: all 0.5s;
 }
 .post-index__card-box:hover {
-  width: 70%;
+  transform: scale(1.15);
   opacity: 0.8;
 }
 .post-index__info {
@@ -40,8 +41,15 @@
 .post-index__index-image:hover {
   opacity: 0.7;
 }
+.post-index__truncate {
+  text-decoration: none;
+  color: skyblue;
+  font-weight: 600;
+  justify-content: flex-end;
+}
 .post-index__user-title {
   text-decoration: none;
+  color: black;
 }
 .post-index__user-inner {
   text-align: center;

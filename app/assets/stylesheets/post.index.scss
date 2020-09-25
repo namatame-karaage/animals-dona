@@ -13,12 +13,13 @@
     width: 60%;
     margin: 0 auto 12px;
     padding: 4px;
+    background-color: $cWhite;
     border-bottom: 1px solid $Black;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 20px 5px;
     transition: all .5s;
     &:hover {
-      width: 70%;
+      transform: scale(1.15);
       opacity: .8;
     }
   }
@@ -46,9 +47,16 @@
     }
   }
 
+  &__truncate{
+    text-decoration: none;
+    color: skyblue;
+    font-weight: 600;
+    justify-content: flex-end;
+  }
+
   &__user-title {
     text-decoration: none;
-
+    color: $Black;
   }
 
   &__user-inner {

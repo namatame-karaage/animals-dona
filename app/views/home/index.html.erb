@@ -1,25 +1,10 @@
-<% if user_signed_in? %>
   <header class="header">
     <div class="header__top">
       <%= link_to root_path, class: "header__top-text"  do %>
         <span class="header__animals">Animals</span>
         <span class="header__domi">Domi</span>
       <% end %>
-      <%= link_to "投稿する", new_problem_path, class: "header__btn"%>
-      <%= link_to "投稿一覧", problems_path , class: "header__btn"%>
-      <%= link_to "MYページ", user_path(current_user) , class: "header__btn "%>
-      <%= link_to 'ユーザー一覧', users_path, class: "header__btn"%>
-      <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "header__btn"%>
-    </div>
-  </header>
-<% else %>
-  <header class="header">
-    <div class="header__top">
-      <%= link_to root_path, class: "header__top-text"  do %>
-        <span class="header__animals">Animals</span>
-        <span class="header__domi">Domi</span>
-      <% end %>
-        <%= link_to "寄付・入会のお願い", new_user_registration_path , class: "header__btn"%>
+        <%= link_to "入会のお願い", new_user_registration_path , class: "header__btn"%>
         <%= link_to "ログイン", new_user_session_path, class: "header__btn" %>
         <%= render 'devise/sessions/testuser', class: "header__btn"%>
     </div>
@@ -30,20 +15,24 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="wrapper__title">
-            <h1>動物達を助けよう・知ろう！！</h1>
+            <h1>生き物を大切に・知ろう！！</h1>
             <p>
-              まず、地球で何が起きているのか、そこで動物達がどう生きているのか？など<br>
+              まず、地球で何が起きているのか、そこで生物達がどう生きているのか？など<br>
               個人が気軽に投稿ができて<span class="wrapper__text-inner">"知ること"</span>ができるコミュニティです
             </p>
           </div>
           <%= image_tag 'top-bird.jpg' , class: "swiper-container__image" %>
         </div>
         <div class="swiper-slide">
-          <div class="wrapper__title">test</div>
+          <div class="wrapper__title">
+           <h1>環境を大切に</h1>
+          </div>
           <%= image_tag 'natural.jpeg', class: "swiper-container__image"%>
         </div>
         <div class="swiper-slide">
-          <div class="wrapper__title">test</div>
+          <div class="wrapper__title">
+            <h1>生物達に還元しましょう</h1>
+          </div>
           <%= image_tag 'flog2.jpeg', class: "swiper-container__image"%>
         </div>
       <div class="wrapper__footer">
@@ -70,12 +59,13 @@
   </main>
 
   <div class="tabs-menu">
-    <h1 class="domination__text">これだけで助かります！</h1>
+    <h1 class="domination__text">Donation</h1>
+    <p class="domination__inner">例えば1ヶ月1,000・・1日約30円ちょっと我慢すればこれだけ助かります</p>
     <div class="tabs-menu__container">
       <ul class="menu">
-        <li><a class="menu__item active">1000円</a></li>
-        <li><a class="menu__item">3000円</a></li>
-        <li><a class="menu__item">5000円</a></li>
+        <li><a class="menu__item active">1,000円</a></li>
+        <li><a class="menu__item">3,000円</a></li>
+        <li><a class="menu__item">5,000円</a></li>
       </ul>
 
       <ul class="contents">
@@ -103,6 +93,5 @@
       </ul>
     </div>
   </div>
-<% end %>
 <footer class="footer">@AnimalsDonation  2020</footer>
 

@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+@import 'modules/colors';
 
 // header/style
 .header {
@@ -33,7 +33,6 @@
   &__domi {
     font-size: 4rem;
     font-family: 'Ubuntu', sans-serif;
-
   }
 
   &__animals {
@@ -104,7 +103,6 @@
     width: 70%;
     height: 100%;
     padding-bottom: 100px;
-
     margin: 0 auto;
     text-align: center;
     background-color: $cWhite;
@@ -129,115 +127,9 @@
     width: 70%;
     font-size: 2.2rem;
     margin: 0 auto 30px;
-  }
-}
-
-// タブメニュ-
-.tabs-menu {
-  width: 100%;
-  padding: 50px 0;
-  background-color: $bcOrange;
-
-  &__container {
-    margin: 0 auto;
-    width: 70%;
-    display: flex;
-  }
-}
-
-.menu {
-  position: relative;
-  list-style: none;
-  width: 270px;
-  margin-right: 20px;
-  background-color: $cWhite;
-  padding: 15px 10px;
-  border-radius: 5px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 104%;
-    border: 15px solid transparent;
-    border-left: 16px solid $cWhite;
-  }
-
-  & li {
-    display: inline-block;
-    margin-bottom: 40px;
-
-    &:nth-child(1) {
-      margin-top: 40px;
-    }
-  }
-
-  &__item {
-    display: inline-block;
-    letter-spacing: 2px;
-    font-size: 20px;
-    font-weight: 600;
-    width: 233px;
-    height: 40px;
-    line-height: 26px;
     text-align: center;
-    text-decoration: none;
-    padding: 7px;
-    color: $bcOrange;
-    background-color: rgb(218, 211, 211);
-    border-radius: 20px;
-    transition: all .4s;
-    cursor: pointer;
-
-    &:hover {
-      background: $bcOrange;
-      color: #fff;
-    }
   }
 }
-
-.active {
-  background: $bcOrange;
-  color: #fff;
-}
-
-ul.menu li :not(.active):hover {
-  opacity: 0.5;
-  transition: .8s;
-}
-
-.contents {
-  padding: 10px;
-  text-align: center;
-
-
-  &__title {
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  &__text {
-    text-align: center;
-    font-size: 1.6rem;
-    letter-spacing: 2px;
-  }
-
-  .content {
-    list-style: none;
-    font-size: 14px;
-    padding: 20px 10px;
-    line-height: 1.4;
-    background: $cWhite;
-    min-height: 150px;
-    display: none;
-    border-radius: 5px;
-
-    &.show {
-      display: block;
-    }
-  }
-}
-
 
 .footer {
   width: 100%;
