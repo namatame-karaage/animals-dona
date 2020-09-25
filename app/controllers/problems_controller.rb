@@ -3,10 +3,12 @@ class ProblemsController < ApplicationController
 
   def index
     @problems = Problem.all.page(params[:page]).per(5).order('created_at DESC')
+    @like = Like.new
   end
 
   def show
     @problem = Problem.find(params[:id])
+    @like = Like.new
   end
 
   def new

@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="problem-show">
-    <h1 class="message__title">掲載記事詳細</h1>
+    <h1 class="message__title">記事詳細</h1>
     <div class="problem-show__container">
       <div class="problem-show__card">
         <%= attachment_image_tag @problem, :image ,class: "problem-show__image"%>
@@ -30,22 +30,24 @@
           </div>
         </div>
       </div>
+
+      <%= render partial: 'likes/like' %>
+
       <div class="problem-show__edit-btn">
         <% if @problem.user.id == current_user.id%>
           <%= link_to '編集する', edit_problem_path(@problem),class: "header__btn"%>
           <%= link_to '削除する',problem_path(@problem), method: :delete, data: { confirm: "本当に削除しますか？"}, class: "delete-btn"%>
         <% end %>
       </div>
-    </div>
-    <div class="problem-user">
-      <span class="problem-user__post">投稿者</span>
-      <%= link_to user_path(@problem.user),class: "problem-user__deco" do%>
-        <%= attachment_image_tag @problem.user, :profile_image, fallback: "no-image.png", class: 'problem-user__image'%>
-        <span class="problem-user__usericon">
-          <span class="problem-user__username"><%= @problem.user.username%>さんのページへ</span>
-          <i class="far fa-arrow-alt-circle-right icon"></i>
-        </span>
-      <% end %>
+      <div class="problem-user">
+        <span class="problem-user__post">投稿者</span>
+        <%= link_to user_path(@problem.user),class: "problem-user__deco" do%>
+          <span class="problem-user__usericon">
+            <span class="problem-user__username"><%= @problem.user.username%>さんのページへ</span>
+            <i class="far fa-arrow-alt-circle-right icon"></i>
+          </span>
+        <% end %>
+      </div>
     </div>
   </div>
 </section>

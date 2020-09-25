@@ -1,0 +1,29 @@
+// Place all the styles related to the likes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// お気に入り
+.favorite {
+  padding: 5px 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: palevioletred;
+  background-color: $cWhite;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s;
+    &:hover {
+      opacity: .7;
+      font-size: 2.5rem;
+    }
+  &__heart{
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: palevioletred;
+  }
+
+  &__count {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+}

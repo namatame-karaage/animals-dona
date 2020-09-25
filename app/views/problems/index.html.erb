@@ -37,6 +37,10 @@
                 <p><%= link_to "続きを読む・・",problem_path(problem), class: "post-index__truncate"%><p>
               <% end %>
             <% end %>
+            <div class="favorite-box">
+              <i class="fas fa-heart favorite__heart"></i>
+              <%= problem.liked_users.count %>
+            </div>
               <p class="date">作成日: <%= problem.updated_at.strftime("%Y-%m-%d %H:%M")%></p>
           </div>
         </div>

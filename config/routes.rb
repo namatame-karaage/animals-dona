@@ -2,5 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "home#index"
   resources :users
-  resources :problems
+  resources :problems do
+    resources :likes, only: [:create, :destroy]
+  end
 end
