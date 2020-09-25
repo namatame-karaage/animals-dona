@@ -7,9 +7,8 @@
       <% end %>
       <div class="side-header__i">
         <i class="fab fa-themeisle icon"></i>
-        <%= link_to "トップへ戻る", root_path , class: "side-header__btn"%>
+        <%= link_to "トップへ戻る", problems_path, class: "side-header__btn"%>
       </div>
-        <%= link_to "投稿一覧", problems_path , class: "side-header__btn"%>
         <%= link_to "MYページ", user_path(current_user) , class: "side-header__btn "%>
         <%= link_to 'ユーザー一覧', users_path, class: "side-header__btn"%>
         <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "side-header__btn"%>

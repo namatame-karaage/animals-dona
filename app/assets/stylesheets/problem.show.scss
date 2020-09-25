@@ -1,61 +1,53 @@
+@import 'modules/colors';
+
 .problem-show {
   width: 100%;
   height: 100%;
 
   &__container {
-    height: 400px;
-    margin-top: 30px;
-    padding: 30px;
+    text-align: center;
+    padding: 20px 5px;
+    margin: 20px 50px;
     background-color: $cWhite;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 20px 5px;
   }
 
-  &__card {
-    display: flex;
-    margin-bottom: 16px;
-  }
 
   &__image {
-    width: 280px;
-    height: 280px;
-    border-radius: 10px;
-  }
-
-  &__show-box {
-    width: 100%;
-    margin-left: 30px;
-    font-weight: 600;
+    max-width: 80%;
+    width: 600px;
+    height: 250px;
+    background-size: center;
   }
 
   &__info {
-    width: 100%;
-    height: 60px;
-    margin-bottom: 10px;
-
-    &::after {
-      content: '';
-      display: block;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      width: 90%;
-      margin-top: 3px;
-    }
+    width: 450px;
+    margin: 30px auto;
   }
 
   &__title {
-    font-size: 1.5rem;
-    opacity: .8;
-    margin-right: 40px;
+    display: block;
+    font-size: 1.6rem;
+    opacity: .7;
+    letter-spacing: 8px;
   }
 
   &__title-name {
-    font-size: 2rem;
+    letter-spacing: 10px;
+    font-weight: 600;
+    font-size: 2.2rem;
+    border-bottom: 2px dotted $Black;
   }
 
   &__title-body {
-    display: inline-block;
-    font-size: 3rem;
+    letter-spacing: 4px;
+    font-weight: 500;
+    font-size: 2rem;
   }
+
 }
+
 
 .problem-user {
   width: 100%;

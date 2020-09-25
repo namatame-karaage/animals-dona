@@ -3,60 +3,76 @@
   height: 100%;
 }
 .problem-show__container {
-  height: 400px;
-  margin-top: 30px;
-  padding: 30px;
+  text-align: center;
+  padding: 20px 5px;
+  margin: 20px 50px;
+  background-color: white;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 20px 5px;
 }
-.problem-show__card {
-  display: flex;
-  margin-bottom: 16px;
-}
 .problem-show__image {
-  width: 280px;
-  height: 280px;
-  border-radius: 10px;
-}
-.problem-show__show-box {
-  width: 100%;
-  margin-left: 30px;
-  font-weight: 600;
+  max-width: 80%;
+  width: 600px;
+  height: 250px;
+  background-size: center;
 }
 .problem-show__info {
-  width: 100%;
-  height: 60px;
-  margin-bottom: 10px;
-}
-.problem-show__info::after {
-  content: "";
-  display: block;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  width: 90%;
-  margin-top: 3px;
+  width: 450px;
+  margin: 30px auto;
 }
 .problem-show__title {
-  font-size: 1.5rem;
-  opacity: 0.8;
-  margin-right: 40px;
+  display: block;
+  font-size: 1.6rem;
+  opacity: 0.7;
+  letter-spacing: 8px;
 }
 .problem-show__title-name {
-  font-size: 2rem;
+  letter-spacing: 10px;
+  font-weight: 600;
+  font-size: 2.2rem;
+  border-bottom: 2px dotted black;
 }
 .problem-show__title-body {
-  display: inline-block;
-  font-size: 3rem;
+  letter-spacing: 4px;
+  font-weight: 500;
+  font-size: 2rem;
 }
 
 .problem-user {
   width: 100%;
   text-align: center;
   font-weight: 600;
+  margin-top: 12px;
+}
+.problem-user::after {
+  content: "";
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 90%;
+  margin: 0 auto;
 }
 .problem-user__post {
   font-size: 1.3rem;
+}
+.problem-user__deco {
+  text-decoration: none;
+  transition: letter-spacing 0.3s;
+}
+.problem-user__deco:hover {
+  opacity: 0.7;
+  letter-spacing: 2px;
 }
 .problem-user__image {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+}
+.problem-user__username {
+  font-size: 2rem;
+  color: black;
+  margin-top: 10px;
+}
+.problem-user .icon {
+  font-size: 2rem;
+  color: orangered;
 }

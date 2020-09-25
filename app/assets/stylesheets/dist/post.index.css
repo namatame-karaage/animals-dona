@@ -3,7 +3,29 @@
   height: 100%;
 }
 .post-index__container {
-  padding: 5px 20px;
+  position: relative;
+  z-index: 0;
+}
+.post-index__container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: skewY(-5deg);
+  transform-origin: left bottom;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: orangered;
+}
+.post-index__sharp {
+  padding: 50px 30px;
+}
+.post-index__top-title {
+  text-align: center;
+  font-size: 4rem;
+  height: 100px;
+  letter-spacing: 10px;
 }
 .post-index__card-box {
   display: flex;

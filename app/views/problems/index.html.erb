@@ -10,8 +10,11 @@
     <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "header__btn"%>
   </div>
 </header>
+
 <div class="post-index">
-  <h1 class="message__title">掲載記事一覧</h1>
+  <div class="post-index__sharp">
+    <h1 class="post-index__top-title">掲載記事一覧</h1>
+  </div>
   <div class="post-index__container">
     <% @problems.each do |problem|%>
       <div class="post-index__card-box">
@@ -42,4 +45,5 @@
     <div class="paginate"><%= paginate @problems %></div>
   </div>
 </div>
+
 
