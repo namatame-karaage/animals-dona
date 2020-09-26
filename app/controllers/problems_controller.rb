@@ -9,6 +9,8 @@ class ProblemsController < ApplicationController
   def show
     @problem = Problem.find(params[:id])
     @like = Like.new
+    @comment = Comment.new
+    @comments = @problem.comments.includes(:user)
   end
 
   def new

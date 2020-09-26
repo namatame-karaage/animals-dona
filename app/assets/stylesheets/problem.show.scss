@@ -6,8 +6,8 @@
 
   &__container {
     text-align: center;
-    padding: 20px 5px;
-    margin: 20px 50px;
+    padding: 20px 0;
+    margin: 20px 130px;
     background-color: $cWhite;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 20px 5px;
@@ -16,8 +16,9 @@
 
   &__image {
     max-width: 80%;
-    width: 600px;
+    width: 500px;
     height: 250px;
+    margin-top: 16px;
     background-size: center;
   }
 
@@ -58,7 +59,7 @@
     content: '';
     display: block;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    width: 90%;
+    width: 60%;
     margin: 0 auto;
 
   }
@@ -90,6 +91,71 @@
 
   .icon {
     font-size: 2rem;
-    color: orangered;
+    color: $bgOrangered;
+  }
+}
+
+.comment-box{
+  padding: 20px 0;
+  margin: 20px 130px;
+  background-color: $cWhite;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 20px 5px;
+
+  &__send{
+    border-bottom: 1px solid gray;
+    text-align: center;
+
+  }
+  .textbox{
+    width: 80%;
+    font-size: 1.7rem;
+    padding:  5px;
+  }
+
+  .form__submit{
+    font-size: 1.4rem;
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: royalblue;
+    color: $cWhite;
+    border: none;
+    border-radius: 15px;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: .5;
+    }
+
+  }
+
+  .comments{
+    padding: 15px 30px;
+
+    &__box{
+      margin-bottom: 10px;
+      border-bottom: 2px solid gray;
+      opacity: .7;
+    }
+
+    &__title{
+      text-align: center;
+      font-size: 1.7rem;
+
+    }
+
+    &__username{
+      color: $Black;
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    &__text{
+      margin: 15px 40px;
+      font-size: 1.25rem;
+      letter-spacing: 2px;
+    }
   }
 }
