@@ -11,4 +11,12 @@ class Problem < ApplicationRecord
     validates :body
     validates :image
   end
+
+  def self.search(search)
+    if search != ""
+      Problem.where('title LIKE(?)', "%#{search}%")
+    else
+      Problem.all
+    end
+  end
 end

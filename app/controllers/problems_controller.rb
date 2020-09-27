@@ -1,4 +1,5 @@
 class ProblemsController < ApplicationController
+  before_action :set_problem, only: [:edit, :show, :update, :destroy]
   before_action :authenticate_user!, expect: [:index]
 
   def index
@@ -8,7 +9,6 @@ class ProblemsController < ApplicationController
    end
 
   def show
-    @problem = Problem.find(params[:id])
     @like = Like.new
     @comment = Comment.new
     @comments = @problem.comments.includes(:user)
@@ -29,14 +29,12 @@ class ProblemsController < ApplicationController
   end
 
   def edit
-    @problem = Problem.find(params[:id])
     if @problem.user != current_user
       redirect_to problems_path, alert: '不正なアクセスです'
     end
   end
 
   def update
-    @problem = Problem.find(params[:id])
     if @problem.update(problem_params)
       redirect_to problem_path(@problem), notice:'更新に成功しました'
     else
@@ -45,12 +43,22 @@ class ProblemsController < ApplicationController
   end
 
   def destroy
-    @problem = Problem.find(params[:id])
     @problem.destroy
     redirect_to problems_path
   end
 
+  def search
+    @problems = Problem.search(params[:keyword])
+    unless user_signed_in?
+      redirect_to action: :index
+    end
+  end
+
   private
+  def set_problem
+    @problem = Problem.find(params[:id])
+  end
+
   def problem_params
     params.require(:problem).permit(:title, :body, :image)
   end

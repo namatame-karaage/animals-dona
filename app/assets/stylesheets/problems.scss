@@ -4,6 +4,7 @@
 
 @import 'modules/colors';
 
+// ランキング
 .rank {
   display: inline-block;
   width: 30px;
@@ -15,9 +16,11 @@
   font-size: 1.2rem;
   background-color: gold;
   transform: rotate(-20deg);
-
 }
 
+.contents-row{
+  margin-top: 100px;
+}
 
 // ログイン後のトップページ
 .post-index {
@@ -48,6 +51,7 @@
 
   &__top-title {
     text-align: center;
+    margin-top: 50px;
     font-size: 4rem;
     height: 100px;
     letter-spacing: 10px;
@@ -132,8 +136,6 @@
     width: 500px;
   }
 }
-
-
 .date {
   margin-top: 45px;
   padding: 5px 5px 0 0;
