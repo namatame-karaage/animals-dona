@@ -10,10 +10,37 @@
     <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "header__btn"%>
   </div>
 </header>
-<div class="rank">
+<div class="post-index">
   <h1 class="post-index__top-title">ランキング</h1>
   <% @posts.each.with_index(1) do |post, i| %>
-    第<%= i%>位<%= post.title%>
+    <div class="post-index__card-box">
+      <div class="rank"><%= i%></div>
+      <div class="post-index__user-inner">
+        <%= link_to user_path(post.user.id) do %>
+          <%= attachment_image_tag post.user, :profile_image, fallback: "no-image.png", size: "72x72", style: "border-radius: 50%;"%>
+          <p><%= link_to post.user.username, user_path(post.user.id),  class: "post-index__username"%></p>
+        <% end %>
+      </div>
+      <div class="post-index__info">
+        <div class="post-index__info-post">
+          <%= link_to problem_path(post), class: "post-index__index-image" do %>
+            <%= attachment_image_tag post, :image, size: "75x75", style: "border-radius: 10%;" %>
+          <% end %>
+        </div>
+        <div class="post-index__right">
+          <%= link_to problem_path(post), class: "post-index__user-title" do %>
+            <h2 class="post-index__title"><%= post.title%></h2>
+            <%= truncate(post.body, length: 100) do %>
+              <p><%= link_to "続きを読む・・",problem_path(post), class: "post-index__truncate"%><p>
+            <% end %>
+          <% end %>
+          <div class="favorite-box">
+            <i class="fas fa-heart favorite__heart"></i>
+            <%= post.liked_users.count %>
+          </div>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
 

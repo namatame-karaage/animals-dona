@@ -4,6 +4,21 @@
 
 @import 'modules/colors';
 
+.rank {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 15px;
+  padding: 5px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: gold;
+  transform: rotate(-20deg);
+
+}
+
+
 // ログイン後のトップページ
 .post-index {
   width: 100%;
