@@ -62,6 +62,7 @@
               <p>
                 <strong><%= link_to comment.user.username, "/users/#{comment.user_id}" ,class: "comments__username"%></strong>
               </p>
+              投稿日: <%= comment.updated_at.strftime("%Y-%m-%d")%>
               <p class="comments__text"><%= comment.content %></p>
             </div>
           <% end %>

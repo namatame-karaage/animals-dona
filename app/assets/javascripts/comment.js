@@ -3,10 +3,10 @@ document.addEventListener("turbolinks:load", function () {
     let html = `<div class="comments__box">
                   <p>
                     <strong>
-                      <a href=/users/${comment.user_id}>${comment.user_name}</a>
+                      <a class= "comments__username" href=/users/${comment.user_id}>${comment.user_name}</a>
                     </strong>
                   </p>
-                  ${comment.content}
+                  <p class="comments__text">${comment.content}</p>
                 </div>`;
     return html;
   }
