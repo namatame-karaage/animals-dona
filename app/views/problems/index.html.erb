@@ -10,6 +10,12 @@
     <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "header__btn"%>
   </div>
 </header>
+<div class="rank">
+  <h1 class="post-index__top-title">ランキング</h1>
+  <% @posts.each.with_index(1) do |post, i| %>
+    第<%= i%>位<%= post.title%>
+  <% end %>
+</div>
 
 <div class="post-index">
   <div class="post-index__sharp">

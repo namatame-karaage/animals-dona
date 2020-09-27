@@ -4,7 +4,8 @@ class ProblemsController < ApplicationController
   def index
     @problems = Problem.all.page(params[:page]).per(5).order('created_at DESC')
     @like = Like.new
-  end
+    @posts = Problem.all.sort {|a,b| b.liked_users.count <=> a.liked_users.count}
+   end
 
   def show
     @problem = Problem.find(params[:id])
