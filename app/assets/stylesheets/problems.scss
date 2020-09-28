@@ -22,6 +22,36 @@
   margin-top: 100px;
 }
 
+.side-mypage {
+  display: inline-block;
+  width: 10%;
+  padding-left: 20px;
+  margin-top: 60px;
+  position: fixed;
+  z-index: 10;
+  &__name {
+    font-size: 1.3rem;
+    padding: 5px;
+  }
+  &__img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  &__my{
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 15px;
+    background-color: $bcOrange;
+    color: $cWhite;
+    border-radius: 20px;
+    transition: opacity .3s;
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
 // ログイン後のトップページ
 .post-index {
   width: 100%;
@@ -51,8 +81,8 @@
 
   &__top-title {
     text-align: center;
-    margin-top: 50px;
     font-size: 4rem;
+    margin-top: 50px;
     height: 100px;
     letter-spacing: 10px;
   }

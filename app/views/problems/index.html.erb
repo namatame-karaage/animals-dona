@@ -11,12 +11,19 @@
       <span class="header__domi">Domi</span>
     <% end %>
     <%= link_to "投稿する", new_problem_path, class: "header__btn"%>
-    <%= link_to "MYページ", user_path(current_user) , class: "header__btn "%>
     <%= link_to 'ユーザー一覧', users_path, class: "header__btn"%>
     <%= link_to "ログアウト", destroy_user_session_path , data: { confirm: "本当にログアウトします？"},method: :delete, class: "header__btn"%>
   </div>
 </header>
+
 <div class="post-index">
+  <div class="side-mypage">
+    <div class="side-mypage__box">
+      <h3 class="side-mypage__name"><%= current_user.username%></h3>
+      <%= attachment_image_tag current_user, :profile_image, fallback: "no-image.png",class: "side-mypage__img"%>
+      <p><%= link_to "MYページ", user_path(current_user) , class: "side-mypage__my"%></p>
+     </div>
+  </div>
   <h1 class="post-index__top-title">ランキング</h1>
   <% @posts.each.with_index(1) do |post, i| %>
     <div class="post-index__card-box">
