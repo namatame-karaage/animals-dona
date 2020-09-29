@@ -25,26 +25,40 @@
   </div>
   <div class="content">
     <div class="mypage">
-      <h1 class="message__title">マイページ</h1>
-        <div class="mypage__box">
-          <div class="mypage__user">
-            <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png",class: "mypage__image" %>
-            <div class="mypage__username">
-              <%= @user.username%>
-            </div>
-            <div class="mypage__edit">
-              <% if @user.id == current_user.id%>
-                <%= link_to '編集ページへ', edit_user_path(@user),class: "header__btn" %>
+    <h1 class="message__title">マイページ</h1>
+      <div class="mypage__box">
+        <div class="mypage__user">
+          <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png",class: "mypage__image" %>
+          <div class="mypage__username">
+            <%= @user.username%>
+          </div>
+          <div class="mypage__edit">
+            <% if @user.id == current_user.id%>
+              <%= link_to '編集ページへ', edit_user_path(@user),class: "header__btn" %>
+            <% end %>
+          </div>
+          <p class="count">投稿数:<%= @user.problems.count%></p>
+          <div class="relationship">
+            <div class="follower">
+              <%= link_to followers_user_path(@user.id), class: "relationship__links" do %>
+                <span class="relationship__follow-count">フォロワー<%= @user.followers.count %></span>
               <% end %>
             </div>
-            <p class="count">投稿数:<%= @user.problems.count%></p>
-          </div>
-
-          <div class="mypage__profile-box">
-            <h3 class="mypage__title-info">紹介文</h3>
-            <%= @user.profile%>
+            <div class="follow">
+              <%= link_to following_user_path(@user.id), class: "relationship__links" do %>
+                <span class="relationship__follow-count">フォロー<%= @user.following.count %></span>
+              <% end %>
+            </div>
+            <div>
+              <%= render "follow_form" %>
+            </div>
           </div>
         </div>
+        <div class="mypage__profile-box">
+          <h3 class="mypage__title-info">紹介文</h3>
+          <%= @user.profile%>
+        </div>
+      </div>
     </div>
 
     <div class="post-show">
@@ -67,7 +81,6 @@
       <% end %>
     </div>
   </div>
-
 </section>
 
 
