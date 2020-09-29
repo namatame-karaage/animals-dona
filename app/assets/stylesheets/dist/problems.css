@@ -87,6 +87,7 @@
   padding: 50px 30px;
 }
 .post-index__top-title {
+  font-family: "Ubuntu", sans-serif;
   width: 50%;
   height: 70px;
   position: relative;

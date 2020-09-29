@@ -24,7 +24,7 @@
       <p><%= link_to "MYページ", user_path(current_user) , class: "side-mypage__my"%></p>
      </div>
   </div>
-  <h1 class="post-index__top-title">ランキング</h1>
+  <h1 class="post-index__top-title">Ranking</h1>
   <% @posts.each.with_index(1) do |post, i| %>
     <div class="post-index__card-box">
       <div class="rank"><%= i%></div>
@@ -59,7 +59,7 @@
 
 <div class="post-index">
   <div class="post-index__sharp">
-    <h1 class="post-index__top-title">掲載記事一覧</h1>
+    <h1 class="post-index__top-title">News List</h1>
   </div>
   <div class="post-index__container">
     <% @problems.each do |problem|%>
