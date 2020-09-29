@@ -1,0 +1,41 @@
+.follow-box {
+  width: 160px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+  opacity: 1;
+}
+.follow-box__links {
+  text-decoration: none;
+  color: black;
+}
+.follow-box__follow-count {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.follow-box__btn-release, .follow-box__btn-follow {
+  padding: 5px 8px;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+}
+.follow-box__btn-release {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.follow-box__btn-release:hover {
+  color: tomato;
+  opacity: 0.8;
+}
+.follow-box__btn-follow {
+  background-color: royalblue;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.follow-box__btn-follow:hover {
+  opacity: 0.7;
+}

@@ -129,52 +129,11 @@
   margin-top: 5px;
 }
 
-.count,
-.relationship {
+// 投稿数
+.count{
   width: 160px;
   text-align: center;
   font-weight: 600;
   font-size: 1.3rem;
   opacity: .4;
-}
-.relationship{
-  opacity: 1;
-  &__links{
-    text-decoration: none;
-    color: $Black;
-  }
-
-  &__follow-count{
-    display: inline-block;
-    margin-bottom: 5px;
-  }
-
-  &__btn-release,
-  &__btn-follow {
-    padding: 5px 8px;
-    font-size: 1.2rem;
-    border-radius: 20px;
-    border: none;
-    font-weight: 600;
-  }
-  &__btn-release{
-    background-color: $cWhite;
-    border: 1px solid $Black;
-    cursor: pointer;
-    transition: all .3s;
-    &:hover {
-      color: tomato;
-      opacity: .8;
-    }
-  }
-  &__btn-follow {
-    background-color: royalblue;
-    color: $cWhite;
-    cursor: pointer;
-
-    transition: all .3s;
-    &:hover {
-      opacity: .7;
-    }
-  }
 }
