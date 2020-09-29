@@ -24,10 +24,6 @@
         <%= link_to "投稿する", new_problem_path, class: "side-header__btn"%>
       </div>
       <div class="side-header__i">
-        <i class="fas fa-users icon"></i>
-        <%= link_to "投稿一覧", problems_path , class: "side-header__btn"%>
-      </div>
-      <div class="side-header__i">
         <i class="fas fa-dog icon"></i>
         <%= link_to "MYページ", user_path(current_user) , class: "side-header__btn "%>
       </div>
@@ -40,7 +36,7 @@
 
 
   <div class="message">
-    <h1 class="message__title">ユーザー編集</h1>
+    <h1  class="page-title">ユーザー編集</h1>
       <div class="message__container">
         <%= form_with model: @user do |f| %>
         <div class="message__box">
