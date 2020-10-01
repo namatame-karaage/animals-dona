@@ -37,25 +37,25 @@ https://roteger-les-animaux.herokuapp.com/
 # 環境・使用技術　
 
 ## フロントエンド
-. Scss(BEM)
-. JavaScript(ライブラリ: swiper)
-. jquery(Ajax)
+- Scss(BEM)
+- JavaScript(ライブラリ: swiper)
+- jquery(Ajax)
 
 ## バックエンド
-・ Ruby 2.5.8
-・ Rails 5.2.4
+- Ruby 2.5.8
+- Rails 5.2.4
 
-##　開発環境
-・ Docker/Docker-compose
-・ Postgresql
+## 開発環境
+- Docker/Docker-compose
+- Postgresql
 
-##　本番環境
-・ Heroku(デプロイ)
-・ AWS(S3)
-・ Travis.ci
-・ Postgresql
+## 本番環境
+- Heroku(デプロイ)
+- AWS(S3)
+- Travis.ci
+- Postgresql
 
 # インフラ構成図
 
 # ER図
-![]https://drive.google.com/file/d/1IX4bg5SROWMaHtuYFO7Im5nrusr6ummW/view
+https://drive.google.com/file/d/1IX4bg5SROWMaHtuYFO7Im5nrusr6ummW/view
