@@ -9,8 +9,6 @@ before_install:
 scirpt:
   - docker-compose exec --env 'RAILS_ENV=test' web rails db:create
   - docker-compose exec --env 'RAILS_ENV=test' web rails db:migrate
-  # 後で修正します
-  - docker-compose exec --env 'RAILS_ENV=test' web rails test
 
 deploy:
   provider: scirpt
