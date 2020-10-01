@@ -1,0 +1,96 @@
+// Stylesheet: 1024px以上のモニタで適用
+
+.header {
+  &__btn {
+    padding: 4px 8px;
+  }
+  &__top {
+    position: fixed;
+  }
+
+  .actions {
+    padding-top: 22px;
+  }
+}
+
+.wrapper {
+  &__title>h1 {
+    font-size: 3rem;
+  }
+}
+
+.domination {
+  &__inner {
+    width: auto;
+  }
+}
+
+.menu {
+  margin-right: 20px;
+  width: 270px;
+  & li {
+    margin-bottom: 40px;
+    &:nth-child(1) {
+      margin-top: 40px;
+    }
+  }
+  &__item {
+    width: 233px;
+  }
+}
+
+.tabs-menu {
+  &__container {
+    display: flex;
+    width: 70%;
+  }
+
+  &__img {
+    width: 650px;
+    height: 200px;
+  }
+}
+
+.side-header{
+  &__top {
+    width: 240px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+// ログイン後
+.side-mypage {
+  width: auto;
+  position: fixed;
+  margin-top: 20px;
+
+  &__box {
+    display: flex;
+  }
+}
+
+.post-index {
+  &__top-title {
+    margin: 50px auto;
+    letter-spacing: 1px;
+    font-size: 4.5rem;
+    height: auto;
+  }
+}
+// 投稿詳細
+.problem-show {
+  display: flex;
+
+  &__box {
+    margin-right: 30px;
+  }
+
+  &__info {
+    width: 450px;
+    margin: 30px auto;
+  }
+  .comment-box {
+    width: 70%;
+  }
+}

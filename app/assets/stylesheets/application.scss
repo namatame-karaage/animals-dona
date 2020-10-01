@@ -18,6 +18,22 @@
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
+@media (max-width: 480px) {
+  @import "breakpoints/480up";
+}
+
+@media (min-width: 650px) {
+  @import "breakpoints/650up";
+}
+
+@media (min-width: 1024px) {
+  @import "breakpoints/1024up";
+}
+
+@media (min-width: 1280px) {
+  @import "breakpoints/1280up";
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -56,9 +72,8 @@
 
 .pagination * {
   color: white;
-  margin: 0 7px;
   text-decoration: none;
-  padding: 12.5px 18.5px;
+  padding: 8.5px 14.5px;
   border-radius: 25px;
 }
 

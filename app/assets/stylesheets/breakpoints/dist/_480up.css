@@ -1,0 +1,167 @@
+.header__top {
+  display: block;
+  position: static;
+  border: none;
+  text-align: center;
+  z-index: 0;
+}
+.header__btn {
+  display: inline-block;
+  padding: 3px 8px;
+}
+.header .actions {
+  padding-top: 0;
+}
+
+.swiper-container {
+  height: 400px;
+}
+
+.wrapper {
+  margin-top: 0;
+}
+.wrapper__title {
+  width: 100%;
+}
+.wrapper__title > h1 {
+  position: absolute;
+  transform: none;
+  margin: 0;
+  font-size: 2rem;
+  top: -50%;
+  left: 25%;
+}
+.wrapper__title > p {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+.wrapper__text-inner {
+  font-size: 1.4rem;
+}
+.wrapper__footer {
+  position: absolute;
+  left: 57%;
+}
+
+.domination__box {
+  width: 100%;
+}
+.domination__inner {
+  font-size: 1.6rem;
+}
+
+.menu {
+  margin-right: 0;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+}
+.menu::before {
+  display: none;
+}
+.menu li {
+  margin-bottom: 10px;
+}
+.menu li:nth-child(1) {
+  margin-top: 0;
+}
+.menu__item {
+  width: 130px;
+}
+
+.tabs-menu__container {
+  display: block;
+  width: 100%;
+}
+.tabs-menu__img {
+  width: 184px;
+}
+
+.new {
+  display: inline-block;
+}
+
+.side-header {
+  width: 100%;
+}
+.side-header__top {
+  width: auto;
+  height: auto;
+}
+.side-header__i {
+  display: inline-block;
+}
+.side-header .icon {
+  font-size: 15px;
+}
+
+.signup-in {
+  width: auto;
+}
+.signup-in__box {
+  width: 100%;
+}
+
+.search {
+  width: auto;
+}
+
+.side-mypage {
+  width: auto;
+  position: static;
+  margin-top: 20px;
+}
+.side-mypage__box {
+  display: flex;
+}
+
+.rank {
+  margin: 0;
+  display: inline;
+}
+
+.post-index__top-title {
+  margin: 20px auto;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+  height: auto;
+}
+.post-index__card-box {
+  display: block;
+}
+
+.message__container {
+  width: auto;
+}
+
+.content .mypage__box {
+  width: auto;
+}
+.content .post-show {
+  display: block;
+}
+.content .post-show__box {
+  width: auto;
+}
+
+.users-list__container {
+  display: block;
+}
+.users-list__card {
+  width: auto;
+}
+
+.problem-show {
+  display: block;
+}
+.problem-show__box {
+  margin: 0;
+}
+.problem-show__info {
+  width: auto;
+}
+.problem-show .comment-box {
+  width: auto;
+  margin-top: 20px;
+}

@@ -1,0 +1,7 @@
+// Stylesheet: 1280px以上のモニタで適用
+
+.wrapper {
+  &__title>h1 {
+    font-size: 5rem;
+  }
+}
