@@ -36,7 +36,7 @@ class ProblemsController < ApplicationController
 
   def update
     if @problem.update(problem_params)
-      redirect_to problem_path(@problem), notice:'更新に成功しました'
+      redirect_to problem_path(@problem), notice:"#{@problem.title} 投稿しました"
     else
       render :edit
     end
@@ -44,7 +44,7 @@ class ProblemsController < ApplicationController
 
   def destroy
     @problem.destroy
-    redirect_to problems_path
+    redirect_to problems_path, notice:'に成功しました'
   end
 
   def search
