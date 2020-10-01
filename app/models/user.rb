@@ -21,17 +21,17 @@ class User < ApplicationRecord
   has_many :follower_relationships, foreign_key: "following_id", class_name: "Relationship", dependent: :destroy
   has_many :followers, through: :follower_relationships
 
- #フォローしているかを確認するメソッド
+ #フォローしているかを確認
  def following?(user)
    following_relationships.find_by(following_id: user.id)
  end
 
- #フォローするときのメソッド
+ #フォローするとき
  def follow(user)
    following_relationships.create!(following_id: user.id)
  end
 
- #フォローを外すときのメソッド
+ #フォローを外すとき
  def unfollow(user)
    following_relationships.find_by(following_id: user.id).destroy
  end
