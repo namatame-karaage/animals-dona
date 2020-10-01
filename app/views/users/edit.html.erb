@@ -61,7 +61,7 @@
           <div class="field">
             <div id="image-preview">
               <%= f.label :profile_image , "プロフィール画像", class: "field__name"%><br />
-              <%= attachment_image_tag @user, :profile_image, class: "img-square", fallback: "no_image.jpg", size:"150x150" ,style: "border-radius: 50%"%>
+              <%= attachment_image_tag @user, :profile_image, class: "img-square", fallback: "no-image.png", size:"150x150" ,style: "border-radius: 50%"%>
             </div>
               <%= f.attachment_field :profile_image , id: "preview", class: "field__image-box"%>
           </div>
