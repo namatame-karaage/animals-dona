@@ -67,8 +67,8 @@ https://roteger-les-animaux.herokuapp.com/
 
 
 # インフラ構成図
-![](スクリーンショット 2020-10-02 14.03.23)
-
+![](https://user-images.githubusercontent.com/65533226/94891956-6e8d8d80-04be-11eb-8ed2-4acc08f7c872.png)
 
 # ER図
-![]スクリーンショット 2020-10-02 14.08.04)
+![](https://user-images.githubusercontent.com/65533226/94891930-587fcd00-04be-11eb-98cd-05d0d6f132c3.png)
+](url)
