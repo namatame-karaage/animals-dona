@@ -35,7 +35,9 @@
               <p class="users-list__name"><%= user.username %></p>
             <%end%>
           </div>
-          <p><%= user.profile%></p>
+          <%= truncate(user.profile, length: 60) do %>
+            <p><%= link_to "続きを読む・・",user_path(user), class: "post-index__truncate"%><p>
+          <% end %>
         </div>
       <% end %>
     </div>
