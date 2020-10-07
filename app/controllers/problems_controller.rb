@@ -5,7 +5,6 @@ class ProblemsController < ApplicationController
   def index
     @problems = Problem.all.page(params[:page]).per(5).order('created_at DESC')
     @like = Like.new
-    # @posts = Problem.all.sort {|a,b| b.liked_users.count <=> a.liked_users.count}
     @all_ranks = Problem.find(Like.group(:problem_id).order('count(problem_id) desc').limit(3).pluck(:problem_id))
    end
 
