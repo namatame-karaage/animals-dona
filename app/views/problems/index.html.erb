@@ -25,7 +25,7 @@
      </div>
   </div>
   <h1 class="post-index__top-title">Ranking</h1>
-  <% @posts.each.with_index(1) do |post, i| %>
+  <% @all_ranks.each.with_index(1) do |post, i| %>
     <div class="post-index__card-box">
       <div class="rank"><%= i%></div>
       <div class="post-index__user-inner">
