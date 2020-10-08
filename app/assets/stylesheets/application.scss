@@ -23,15 +23,15 @@
 }
 
 @media (min-width: 650px) {
-  @import "breakpoints/650up";
+  @import "breakpoints/650down";
 }
 
 @media (min-width: 1024px) {
-  @import "breakpoints/1024up";
+  @import "breakpoints/1024down";
 }
 
 @media (min-width: 1280px) {
-  @import "breakpoints/1280up";
+  @import "breakpoints/1280down";
 }
 
 *{

@@ -38,7 +38,7 @@
           </div>
 
         <div class="problem-show__card">
-          <h3 class="problem-show__classification">〜<%= @problem.classification%>〜</h3>
+          <h3 class="problem-show__classification"><%= @problem.classification%></h3>
           <%= attachment_image_tag @problem, :image ,class: "problem-show__image"%>
           <div class="problem-show__show-box">
             <div class="problem-show__info">

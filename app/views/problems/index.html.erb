@@ -41,7 +41,7 @@
           <% end %>
         </div>
         <div class="post-index__right">
-          <h4 class="post-index__classification">〜<%= post.classification%>〜</h4>
+          <h4 class="post-index__classification"><%= post.classification%></h4>
           <%= link_to problem_path(post), class: "post-index__user-title" do %>
             <h2 class="post-index__title"><%= post.title%></h2>
             <%= truncate(post.body, length: 100) do %>
@@ -79,7 +79,7 @@
           </div>
           <div class="post-index__right">
             <%= link_to problem_path(problem), class: "post-index__user-title" do %>
-              <h4 class="post-index__classification">〜<%= problem.classification%>〜</h4>
+              <h4 class="post-index__classification"><%= problem.classification%></h4>
               <h2 class="post-index__title"><%= problem.title%></h2>
               <%= truncate(problem.body, length: 100) do %>
                 <p><%= link_to "続きを読む・・",problem_path(problem), class: "post-index__truncate"%><p>
