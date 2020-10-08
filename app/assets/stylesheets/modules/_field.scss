@@ -1,3 +1,6 @@
+@import 'colors';
+
+
 .field {
   width: 100%;
   margin-bottom: 8px;
@@ -79,4 +82,25 @@
   &__body{
     margin-bottom: 20px;
   }
+  &__radio-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    z-index: 10;
+  }
+  &__select{
+    font-size: 1.3rem;
+  }
+}
+.radio-box{
+  margin: 20px 0;
+}
+.radio-box label {
+  background-color: $cWhite;
+  padding: 15px 40px;
+  border-radius: 3px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.radio-box input[type=radio]:checked + label {
+  background-color: $bcOrange;
 }

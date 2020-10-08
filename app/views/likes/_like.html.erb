@@ -1,9 +1,15 @@
   <% if current_user.already_liked?(@problem) %>
-    <%= button_to 'いいねを取り消す', problem_like_path(@problem), method: :delete , class: "favorite", remote: true  %>
-    <i class="fas fa-heart favorite__heart"></i>
-    <span class="favorite__count"><%= @problem.likes.count %></span>
+    <label>
+      <i class="fas fa-heart favorite__heart">
+         <%= button_to 'いいねを取り消す', problem_like_path(@problem), method: :delete , class: "favorite", remote: true  %>
+      </i>
+    </label>
+     <span class="favorite__count"><%= @problem.likes.count %></span>
   <% else %>
-    <%= button_to 'いいね！する', problem_likes_path(@problem), class: "favorite", remote: true  %>
-    <i class="far fa-heart favorite__heart"></i>
-    <span class="favorite__count"><%= @problem.likes.count %></span>
+    <label>
+      <i class="far fa-heart favorite__heart">
+      <%= button_to '', problem_likes_path(@problem), class: "favorite", remote: true  %>
+      </i>
+    </label>
+     <span class="favorite__count"><%= @problem.likes.count %></span>
   <% end %>

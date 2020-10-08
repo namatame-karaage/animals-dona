@@ -4,26 +4,44 @@
 
 // お気に入り
 .favorite {
-  padding: 5px 10px;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: palevioletred;
-  background-color: $cWhite;
-  border: none;
-  cursor: pointer;
-  transition: all 0.4s;
-    &:hover {
-      opacity: .7;
-      font-size: 2.5rem;
-    }
+  display: none;
+
   &__heart{
+    cursor: pointer;
     font-size: 2rem;
     margin-bottom: 15px;
     color: palevioletred;
+    transition: all .3s;
+    &:hover {
+      @include animation (
+        $name: kf-heart-stay,
+        $iteration-count: infinite,
+        $duration: 2s,
+        )
+    }
   }
 
   &__count {
     font-size: 2rem;
     margin-bottom: 15px;
   }
+}
+
+@keyframes kf-heart-stay {
+  0%{
+    transform: translateX(2px);
+  }
+  30%{
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  80%{
+    transform: translateX(-5px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+
 }

@@ -36,7 +36,9 @@
               </span>
             <% end %>
           </div>
+
         <div class="problem-show__card">
+          <h3 class="problem-show__classification">〜<%= @problem.classification%>〜</h3>
           <%= attachment_image_tag @problem, :image ,class: "problem-show__image"%>
           <div class="problem-show__show-box">
             <div class="problem-show__info">
@@ -51,7 +53,7 @@
         <%= render partial: 'likes/like' %>
         <div class="problem-show__edit-btn">
           <% if @problem.user.id == current_user.id%>
-            <%= link_to '編集する', edit_problem_path(@problem),class: "header__btn"%>
+            <%= link_to '編集する', edit_problem_path(@problem),class: "header__btn add"%>
             <%= link_to '削除する',problem_path(@problem), method: :delete, data: { confirm: "本当に削除しますか？"}, class: "delete-btn"%>
           <% end %>
         </div>

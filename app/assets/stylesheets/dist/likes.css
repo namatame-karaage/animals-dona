@@ -1,0 +1,23 @@
+.favorite {
+  display: none;
+}
+.favorite__heart {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: palevioletred;
+  transition: all 0.3s;
+}
+.favorite__heart:hover {
+  transform: scale(1.2);
+}
+.favorite__count {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+@keyframes kf-heart-stay {
+  0% {
+    transform: translateX(40px);
+  }
+}

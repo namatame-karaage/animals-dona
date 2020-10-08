@@ -1,0 +1,149 @@
+.problem-show {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 30px;
+}
+.problem-show__box {
+  margin-right: 30px;
+}
+.problem-show .add {
+  padding: 7px 20px;
+  font-size: 1.6rem;
+}
+.problem-show__classification {
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  margin-top: 14px;
+  padding: 4px 8px;
+  background-color: blanchedalmond;
+}
+.problem-show__container {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 20px 5px;
+}
+.problem-show__image {
+  max-width: 80%;
+  width: 500px;
+  height: 250px;
+  margin-top: 16px;
+  background-size: center;
+}
+.problem-show__info {
+  width: 450px;
+  margin: 30px auto;
+}
+.problem-show__title {
+  display: block;
+  font-size: 1.6rem;
+  opacity: 0.7;
+  letter-spacing: 8px;
+}
+.problem-show__title-name {
+  letter-spacing: 10px;
+  font-weight: 600;
+  font-size: 2.2rem;
+  border-bottom: 2px dotted black;
+}
+.problem-show__title-body {
+  letter-spacing: 4px;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.problem-user {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 12px;
+}
+.problem-user::after {
+  content: "";
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 60%;
+  margin: 0 auto;
+}
+.problem-user__post {
+  font-size: 1.3rem;
+}
+.problem-user__deco {
+  text-decoration: none;
+  transition: letter-spacing 0.3s;
+}
+.problem-user__deco:hover {
+  opacity: 0.7;
+  letter-spacing: 2px;
+}
+.problem-user__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.problem-user__username {
+  font-size: 2rem;
+  color: black;
+  margin-top: 10px;
+}
+.problem-user .icon {
+  font-size: 2rem;
+  color: orangered;
+}
+
+.comment-box {
+  width: 70%;
+  padding: 20px 0;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 20px 5px;
+}
+.comment-box__send {
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+.comment-box .textbox {
+  width: 80%;
+  font-size: 1.7rem;
+  padding: 5px;
+}
+.comment-box .form__submit {
+  font-size: 1.4rem;
+  padding: 5px 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: royalblue;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  transition: opacity 0.3s;
+}
+.comment-box .form__submit:hover {
+  opacity: 0.5;
+}
+.comment-box .comments {
+  padding: 15px 30px;
+}
+.comment-box .comments__box {
+  margin-bottom: 10px;
+  border-bottom: 2px solid gray;
+  opacity: 0.7;
+}
+.comment-box .comments__title {
+  text-align: center;
+  font-size: 1.7rem;
+}
+.comment-box .comments__username {
+  color: black;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.comment-box .comments__text {
+  margin: 15px 40px;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}

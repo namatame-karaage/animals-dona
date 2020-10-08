@@ -43,6 +43,15 @@
             <%= f.text_field :title, class: "field__post"%>
           </div>
           <div class="field">
+            <p class="field__select">選択してください</p>
+            <div class="radio-box">
+              <%= f.radio_button :classification ,"動物関係"%>
+              <%= f.label :classification, '動物関係', class: "field__radio-name"%>
+              <%= f.radio_button :classification, "環境関係"%>
+              <%= f.label :classification, '環境関係', class: "field__radio-name"%>
+            </div>
+          </div>
+          <div class="field">
             <%= f.label :body , '詳細', class: "field__name"%>
             <%= f.text_area :body, class: "field__body"%>
           </div>

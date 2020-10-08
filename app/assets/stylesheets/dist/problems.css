@@ -83,6 +83,14 @@
   height: 100%;
   background-color: orangered;
 }
+.post-index__classification {
+  display: inline-block;
+  text-align: center;
+  padding: 4px 6px;
+  background-color: blanchedalmond;
+  font-weight: 600;
+  border-radius: 10px;
+}
 .post-index__sharp {
   padding: 50px 30px;
 }

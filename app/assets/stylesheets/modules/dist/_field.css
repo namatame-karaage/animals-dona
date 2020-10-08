@@ -1,0 +1,95 @@
+.field {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.field__name {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  display: block;
+}
+.field__inner {
+  font-size: 17px;
+  width: 50%;
+  height: 32px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+.field__btn {
+  background-color: orange;
+  border: 1px solid orange;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 5px 50px;
+  margin: 17px auto;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
+  text-decoration: none;
+}
+.field__btn.solid {
+  box-shadow: 0 4px 0 0 black;
+  border-radius: 7px;
+}
+.field__btn.solid:hover {
+  transform: translate(0, 2px);
+  box-shadow: none;
+}
+.field__check {
+  font-size: 1.6rem;
+  font-weight: 550;
+}
+.field__post {
+  width: 50%;
+  height: 30px;
+  font-size: 1.7rem;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+}
+.field__body {
+  width: 65%;
+  height: 150px;
+  font-size: 1.7rem;
+  padding: 1px;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+}
+.field__image-box {
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+}
+.field__post, .field__body {
+  margin-bottom: 20px;
+}
+.field__radio-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  z-index: 10;
+}
+.field__select {
+  font-size: 1.3rem;
+}
+
+.radio-box {
+  margin: 20px 0;
+}
+
+.radio-box label {
+  background-color: white;
+  padding: 15px 40px;
+  border-radius: 3px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.radio-box input[type=radio]:checked + label {
+  background-color: orange;
+}

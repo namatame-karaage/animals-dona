@@ -11,6 +11,18 @@
   &__box{
     margin-right: 30px;
   }
+  .add {
+    padding: 7px 20px;
+    font-size: 1.6rem;
+  }
+
+  &__classification{
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    margin-top: 14px;
+    padding: 4px 8px;
+    background-color: blanchedalmond;
+  }
 
   &__container {
     width: 100%;
@@ -166,3 +178,4 @@
     }
   }
 }
+
