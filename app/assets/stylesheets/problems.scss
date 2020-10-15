@@ -16,6 +16,7 @@
   font-size: 1.2rem;
   background-color: gold;
   transform: rotate(-20deg);
+  border-radius: 20px;
 }
 
 .page-title {
@@ -96,6 +97,10 @@
       height: 100%;
       background-color: orangered;
     }
+  }
+
+  &__ho {
+    width: 100%;
   }
 
   &__classification{
@@ -192,7 +197,10 @@
 &__user-inner {
   text-align: center;
   margin-right: 20px;
+  padding-right: 10px;
   transition: opacity .3s;
+  border-right: 5px solid $Black;
+
 
   &:hover {
     opacity: .7;
@@ -207,7 +215,7 @@
 
 &__right {
   max-width: 800px;
-  margin-top: 12px;
+  margin-top: 3px;
 }
 
 &__body {

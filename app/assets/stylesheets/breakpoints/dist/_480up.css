@@ -130,6 +130,11 @@
 .post-index__card-box {
   display: block;
 }
+.post-index__user-inner {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
 
 .message__container {
   width: auto;

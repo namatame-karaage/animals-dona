@@ -9,13 +9,13 @@
   &__heart{
     cursor: pointer;
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin: 5px;
     color: palevioletred;
     transition: all .3s;
     &:hover {
       @include animation (
         $name: kf-heart-stay,
-        $iteration-count: infinite,
+        $iteration-count: 1,
         $duration: 2s,
         )
     }

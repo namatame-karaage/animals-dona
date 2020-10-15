@@ -162,6 +162,11 @@
   &__card-box {
     display: block;
   }
+  &__user-inner {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 // 投稿ページ

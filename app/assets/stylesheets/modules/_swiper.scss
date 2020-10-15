@@ -68,6 +68,16 @@
     font-size: 1.6rem;
     margin-left: 10px;
   }
+
+  .font-color-black {
+    color: $Black;
+    letter-spacing: 3px;
+    text-shadow:  10px 0 10px gray;
+  }
+  .font-color-white {
+    text-shadow: 10px 0 20px gray;
+
+  }
 }
 
 @keyframes kf-arrow-anime {
