@@ -34,25 +34,27 @@
           <p><%= link_to post.user.username, user_path(post.user.id),  class: "post-index__username"%></p>
         <% end %>
       </div>
-      <div class="post-index__info">
-        <div class="post-index__info-post">
-          <%= link_to problem_path(post), class: "post-index__index-image" do %>
-            <%= attachment_image_tag post, :image, size: "75x75", style: "border-radius: 10%;" %>
-          <% end %>
-        </div>
-        <div class="post-index__right">
-          <h4 class="post-index__classification"><%= post.classification%></h4>
-          <%= link_to problem_path(post), class: "post-index__user-title" do %>
-            <h2 class="post-index__title"><%= post.title%></h2>
-            <%= truncate(post.body, length: 100) do %>
-              <p><%= link_to "続きを読む・・",problem_path(post), class: "post-index__truncate"%><p>
+      <%= link_to problem_path(post) do %>
+        <div class="post-index__info">
+          <div class="post-index__info-post">
+            <%= link_to problem_path(post), class: "post-index__index-image" do %>
+              <%= attachment_image_tag post, :image, size: "75x75", style: "border-radius: 10%;" %>
             <% end %>
-          <% end %>
-          <div class="favorite-box">
-            <i class="fas fa-heart favorite__heart"></i>
-            <%= post.liked_users.count %>人がいいねしてます
           </div>
-        </div>
+          <div class="post-index__right">
+            <h4 class="post-index__classification"><%= post.classification%></h4>
+            <%= link_to problem_path(post), class: "post-index__user-title" do %>
+              <h2 class="post-index__title"><%= post.title%></h2>
+              <%= truncate(post.body, length: 100) do %>
+                <p><%= link_to "続きを読む・・",problem_path(post), class: "post-index__truncate"%><p>
+              <% end %>
+            <% end %>
+            <div class="favorite-box">
+              <i class="fas fa-heart favorite__heart"></i>
+              <%= post.liked_users.count %>人がいいねしてます
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   <% end %>
