@@ -3,6 +3,8 @@
 .header {
   &__btn {
     padding: 4px 8px;
+    font-size: .9rem;
+
   }
 
   &__top {
@@ -15,6 +17,7 @@
 }
 
 .wrapper {
+  margin: auto;
   &__title>h1 {
     font-size: 3rem;
   }

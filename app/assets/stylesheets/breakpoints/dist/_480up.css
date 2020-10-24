@@ -5,6 +5,9 @@
   text-align: center;
   z-index: 0;
 }
+.header__top-text {
+  display: block;
+}
 .header__btn {
   display: inline-block;
   padding: 3px 8px;

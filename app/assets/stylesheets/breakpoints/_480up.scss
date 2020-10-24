@@ -1,4 +1,4 @@
-// Stylesheet: 480px以上(スマホの横向き)のモニタで適用
+// Stylesheet: 480px以下(スマホの横向き)のモニタで適用
 
 // トップページ
 .header {
@@ -8,6 +8,10 @@
     border: none;
     text-align: center;
     z-index: 0;
+
+    &-text {
+      display: block;
+    }
   }
 
   &__btn {

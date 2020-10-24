@@ -1,4 +1,4 @@
-window.addEventListener("turbolinks:load", function() {
+ document.addEventListener("turbolinks:load", function() {
   let tabs = document.getElementsByClassName("menu__item");
   tabsAry = Array.prototype.slice.call(tabs);
 
