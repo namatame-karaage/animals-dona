@@ -1,0 +1,16 @@
+.scroll {
+  opacity: 1;
+  transition: all 0.3s;
+  animation: kf-scroll 2s;
+}
+
+@keyframes kf-scroll {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
